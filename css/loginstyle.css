@@ -1,0 +1,26 @@
+.content {
+  background-color: blanchedalmond;
+  width: 85%;
+  margin-top: 15vh;
+  height: 70vh;
+}
+
+.col-md-5.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  background-color: blanchedalmond;
+}
+
+img.loginimage {
+  height: 70vh;
+}
+
+body {
+  background-image: url(https://w0.peakpx.com/wallpaper/62/147/HD-wallpaper-dark-abstract-background-neon-lines-dark-lines-background-creative-abstraction-geometric-backgrounds.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
