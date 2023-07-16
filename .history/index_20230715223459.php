@@ -28,7 +28,7 @@
                             <a class="nav-link fs-4 me-4" href="#">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fs-4 me-4" href="signup.php">Sign Up</a>
+                            <a class="nav-link fs-4 me-4" href="#">Sign Up</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fs-4 me-2" href="login.php">Login</a>

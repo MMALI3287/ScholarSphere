@@ -33,7 +33,7 @@ require 'loginAction.php'
                             echo '<div class="alert alert-danger d-flex align-items-center" role="alert">
                             <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
                             <div>
-                              Login Failed. Check your Username and Password.
+                              An example danger alert with an icon
                             </div>
                           </div>';
                         }
@@ -85,5 +85,4 @@ require 'loginAction.php'
 <?php
 $_SESSION['username_error_message'] = "";
 $_SESSION['password_error_message'] = "";
-$_SESSION['login_error_message'] = "";
 ?>

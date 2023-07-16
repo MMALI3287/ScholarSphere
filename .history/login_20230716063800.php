@@ -30,12 +30,14 @@ require 'loginAction.php'
                     <form class="row" action="loginAction.php" method="POST" novalidate>
                         <?php
                         if (isset($_SESSION['login_error_message']) and !empty($_SESSION['login_error_message'])) {
-                            echo '<div class="alert alert-danger d-flex align-items-center" role="alert">
-                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                            echo '<div class="alert alert-success d-flex align-items-center" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                                <use xlink:href="#check-circle-fill" />
+                            </svg>
                             <div>
-                              Login Failed. Check your Username and Password.
+                                An example success alert with an icon
                             </div>
-                          </div>';
+                        </div>';
                         }
                         ?>
                         <div class="col-md-12 mb-4">
@@ -85,5 +87,4 @@ require 'loginAction.php'
 <?php
 $_SESSION['username_error_message'] = "";
 $_SESSION['password_error_message'] = "";
-$_SESSION['login_error_message'] = "";
 ?>

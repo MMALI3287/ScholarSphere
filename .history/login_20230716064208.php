@@ -85,5 +85,4 @@ require 'loginAction.php'
 <?php
 $_SESSION['username_error_message'] = "";
 $_SESSION['password_error_message'] = "";
-$_SESSION['login_error_message'] = "";
 ?>
