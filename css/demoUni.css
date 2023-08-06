@@ -1,0 +1,176 @@
+/* Custom CSS for Harvard University Profile Page */
+
+/* Overall styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header {
+  background-color: #6e6e6e;
+  color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  padding-left: 40vh;
+  text-align: left;
+}
+
+.header h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* Animated icons */
+.animated-icon {
+  font-size: 3rem;
+  color: #ffc107;
+  transition: transform 0.2s;
+}
+
+.animated-icon:hover {
+  transform: scale(1.2);
+}
+
+.header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+  text-align: end;
+}
+
+/* Left side navigation styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  background-color: #191a1b;
+  color: #ffffff;
+  width: 30vh;
+}
+
+.sidebar ul.nav.flex-column {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.nav-link {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.nav-link:hover {
+  color: #ffc107;
+  font-size: 1.7rem;
+}
+
+/* Right side content styling */
+main {
+  margin-left: 250px; /* Adjust as needed to match the sidebar width */
+  padding: 30px;
+  padding-left: 300px; /* Add this line to push content to the right */
+}
+
+section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #6c757d;
+}
+
+/* Left side navigation styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  background-color: #343a40;
+  color: #ffffff;
+  overflow-y: auto; /* Add this line to enable scrolling within the sidebar */
+}
+
+#overview {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .nav.flex-column {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.ranking-list {
+  margin-top: 20px;
+}
+
+.ranking-list ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.ranking-list h3 {
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.statistics-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.statistics-list li {
+  margin-bottom: 10px;
+}
+
+.statistics-list strong {
+  color: #343a40;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Campus Facilities */
+.facilities-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.facilities-list li {
+  margin-bottom: 15px;
+}
+
+.facilities-list i {
+  font-size: 1.5rem;
+  color: #191a1b;
+  margin-right: 10px;
+}
