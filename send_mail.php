@@ -2,11 +2,17 @@
 
 declare(strict_types=1);
 
+require __DIR__ . '/vendor/autoload.php';
 require 'vendor/autoload.php';
 
-use SendGrid\Mail\Mail;
+require 'vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
-$apiKey = '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';
+$apiKey = $_ENV['SENDGRID_API_KEY'];
+
+
+use SendGrid\Mail\Mail;
 
 $email = new Mail();
 
@@ -20,8 +26,8 @@ $email->setSubject('Testing sending files with Attachments');
 
 // Replace the email address and name with your recipient
 $email->addTo(
-    'tanvirraiyan456@gmail.com',
-    'Tanvir Raiyan'
+    'ponkidagreat@gmail.com',
+    'Fakibaj'
 );
 // $email->addTo(
 //     'ponkidagreat@gmail.com',
@@ -35,7 +41,7 @@ $email->addTo(
 
 $email->addContent(
     'text/html',
-    '<strong>Testing sending files with Attachments.</strong>'
+    '<strong>Do some work.</strong>'
 );
 
 $email->setSendAt(1461775051);
