@@ -1,0 +1,78 @@
+/* Additional custom styling for the admission portal */
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background-color: #343a40;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.card-body {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.card-body .university-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.card-body strong {
+  color: #343a40;
+}
+
+.card-body img {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-body img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for university information */
+.university-info {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.university-info strong {
+  color: #343a40;
+}
+
+.university-info p {
+  margin: 5px 0;
+}

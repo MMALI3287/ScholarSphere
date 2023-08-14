@@ -58,7 +58,7 @@
             </div>
             <div class="col-md-3">
                 <a href="uniProfiles/CUET.php" class="university-card">
-                    <img src="assets/images/cuet.jpeg" alt="Chittagong University of Engineering and Technology">
+                    <img src="assets/images/cuet.jpg" alt="Chittagong University of Engineering and Technology">
                     <h3>Chittagong University of Engineering and Technology</h3>
                 </a>
             </div>
@@ -72,7 +72,7 @@
         <div class="row university-row">
             <div class="col-md-3">
                 <a href="uniProfiles/DU.php" class="university-card">
-                    <img src="assets/images/du.jpeg" alt="University of Dhaka">
+                    <img src="assets/images/du.jpg" alt="University of Dhaka">
                     <h3>University of Dhaka</h3>
                 </a>
             </div>
@@ -84,7 +84,7 @@
             </div>
             <div class="col-md-3">
                 <a href="uniProfiles/IUB.php" class="university-card">
-                    <img src="assets/images/iub.jpeg" alt="Independent University, Bangladesh">
+                    <img src="assets/images/iub.jpg" alt="Independent University, Bangladesh">
                     <h3>Independent University, Bangladesh</h3>
                 </a>
             </div>
@@ -98,7 +98,7 @@
         <div class="row university-row">
             <div class="col-md-3">
                 <a href="uniProfiles/JU.php" class="university-card">
-                    <img src="assets/images/ju.webp" alt="Jahangirnagar University">
+                    <img src="assets/images/ju.jpg" alt="Jahangirnagar University">
                     <h3>Jahangirnagar University</h3>
                 </a>
             </div>
@@ -136,7 +136,7 @@
             </div>
             <div class="col-md-3">
                 <a href="uniProfiles/SUST.php" class="university-card">
-                    <img src="assets/images/sust.png" alt="Shahjalal University of Science and Technology">
+                    <img src="assets/images/sust.jpg" alt="Shahjalal University of Science and Technology">
                     <h3>Shahjalal University of Science and Technology</h3>
                 </a>
             </div>

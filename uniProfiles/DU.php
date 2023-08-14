@@ -57,7 +57,7 @@
                 <h1>University of Dhaka</h1>
                 <p>Pioneering Knowledge and Advancing Excellence</p>
             </div>
-            <div class="col-md-2"><img src="../assets/images/du.jpeg" alt="DU"></div>
+            <div class="col-md-2"><img src="../assets/images/du.jpg" alt="DU"></div>
         </div>
     </div>
     <div class="container-fluid">

@@ -26,7 +26,7 @@ $email->setSubject('Testing sending files with Attachments');
 
 // Replace the email address and name with your recipient
 $email->addTo(
-    'ponkidagreat@gmail.com',
+    'mahtab.sani12381@gmail.com',
     'Fakibaj'
 );
 // $email->addTo(

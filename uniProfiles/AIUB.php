@@ -1,3 +1,7 @@
+<?php
+require 'MapsDB.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -149,16 +153,26 @@
                     <p>AIUB offers merit-based and need-based scholarships to support students in pursuing their academic goals. Students are encouraged to explore scholarship opportunities and financial aid options during the application process.</p>
                     <p>The university is committed to helping students manage the cost of education and invest in their future success.</p>
                 </section>
-                <section id="locations">
-                    <h2>Campus Locations</h2>
-                    <div id="map-container" class="pb-5">
-                        <div id="map" data-lat="23.822181" data-lng="90.427493" data-title="AIUB Campus"></div>
-                    </div>
-                    <p>American International University Bangladesh is located in the bustling city of [City], providing a dynamic and stimulating environment for learning and growth.</p>
-                    <p>For detailed directions and to explore the campus on Google Maps,
-                        <a href="https://maps.google.com/maps?ll=23.822181,90.427493&z=20&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=14159172361590563826" target="_blank" rel="noopener noreferrer">click here</a>.
-                    </p>
-                </section>
+                <?php
+                $result = getData('AIUB Campus');
+                if (mysqli_num_rows($result) > 0) {
+                    $row = mysqli_fetch_assoc($result);
+                    $title = $row['UniversityTitle'];
+                    $lat = $row['Latitude'];
+                    $lng = $row['Longitude'];
+                    $url = $row['url'];
+                }
+                echo '<section id="locations">
+                <h2>Campus Locations</h2>
+                <div id="map-container" class="pb-5">
+                    <div id="map" data-lat="' . $lat . '" data-lng="' . $lng . '" data-title="' . $title . '"></div>
+                </div>
+                <p>American International University Bangladesh is located in the bustling city of Dhaka, providing a dynamic and stimulating environment for learning and growth.</p>
+                <p>For detailed directions and to explore the campus on Google Maps,
+                    <a href="' . $url . '" target="_blank" rel="noopener noreferrer">click here</a>.
+                </p>
+            </section>'
+                ?>
                 <section id="facilities">
                     <h2>Campus Facilities</h2>
                     <ul class="facilities-list">

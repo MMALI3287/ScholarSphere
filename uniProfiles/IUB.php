@@ -57,7 +57,7 @@
                 <h1>International University Bangladesh</h1>
                 <p>Nurturing Excellence, Inspiring Innovation</p>
             </div>
-            <div class="col-md-2"><img src="../assets/images/iub.jpeg" alt="IUB"></div>
+            <div class="col-md-2"><img src="../assets/images/iub.jpg" alt="IUB"></div>
         </div>
     </div>
     <div class="container-fluid">

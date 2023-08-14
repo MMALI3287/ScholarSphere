@@ -57,7 +57,7 @@
                 <h1>Jahangirnagar University</h1>
                 <p>Exploring Knowledge, Empowering Minds</p>
             </div>
-            <div class="col-md-2"><img src="../assets/images/ju.webp" alt="JU"></div>
+            <div class="col-md-2"><img src="../assets/images/ju.jpg" alt="JU"></div>
         </div>
     </div>
     <div class="container-fluid">

@@ -57,7 +57,7 @@
                 <h1>Shahjalal University of Science and Technology</h1>
                 <p>Exploring Knowledge and Innovation in Science and Technology</p>
             </div>
-            <div class="col-md-2"><img src="../assets/images/sust.png" alt="SUST"></div>
+            <div class="col-md-2"><img src="../assets/images/sust.webp" alt="SUST"></div>
         </div>
     </div>
     <div class="container-fluid">

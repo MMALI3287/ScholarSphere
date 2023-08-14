@@ -57,7 +57,7 @@
                 <h1>Chittagong University of Engineering and Technology</h1>
                 <p>Pioneering Excellence in Engineering and Technology Education</p>
             </div>
-            <div class="col-md-2"><img src="../assets/images/cuet.jpeg" alt="CUET"></div>
+            <div class="col-md-2"><img src="../assets/images/cuet.jpg" alt="CUET"></div>
         </div>
     </div>
     <div class="container-fluid">
