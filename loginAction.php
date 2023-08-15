@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $row = mysqli_fetch_assoc($result);
             $_SESSION['username'] = $row['username'];
             $_SESSION['id'] = $row['id'];
-            header("Location: index.php");
+            header("Location: Forum.php");
         } else {
             $_SESSION['login_error_message'] = "Invalid username or password";
             header("Location: login.php");

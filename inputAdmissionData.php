@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- <?php include 'partials/_header.php'; ?> -->
     <div class="container mt-5">
         <h1 class="text-center">University Admission Form</h1>
         <form action="process_form.php" method="post" enctype="multipart/form-data" novalidate>
