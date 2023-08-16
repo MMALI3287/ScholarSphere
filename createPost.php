@@ -20,8 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $conn = connect(); // Assuming you have a function named 'connect' in your connect.php
 
-    $insertQuery = "INSERT INTO forum_posts (id, title, content, category_id, subcategory_id, created_at) 
-                    VALUES ('$userId', '$title', '$content', '$categoryId', '$subcategoryId', NOW())";
+    $insertQuery = "INSERT INTO forum_posts (id, title, content, category_id, subcategory_id, created_at) VALUES ('$userId', '$title', '$content', '$categoryId', '$subcategoryId', NOW())";
 
     if (mysqli_query($conn, $insertQuery)) {
         // Post added successfully
