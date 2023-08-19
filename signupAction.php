@@ -11,8 +11,14 @@ $_SESSION['auth_code'] = '';
 $username = $_SESSION['username'];
 $email = $_SESSION['email'];
 $password = $_SESSION['password']; // Make sure to retrieve the password here
-$type = $_SESSION['type'];
 
+if ($_SESSION['type'] === 'Admin') {
+    $type = 'admins';
+} else if ($_SESSION['type'] === "Admission Candidate") {
+    $type = 'admission_candidates';
+} else if ($_SESSION['type'] === "Alumni / Current Student") {
+    $type = 'alumni_current_students';
+}
 // Insert data into the database
 $sql = "INSERT INTO users (id, username, email, password, type) VALUES (NULL, '$username', '$email', '$password', '$type')";
 

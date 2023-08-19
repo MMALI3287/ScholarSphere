@@ -223,6 +223,17 @@ $errors = 0;
                 echo 'Caught exception: ' . $e->getMessage() . "\n";
             }
         }
+    } else {
+        $_SESSION['type_error_message'] = "";
+        $_SESSION['username_error_message'] = "";
+        $_SESSION['email_error_message'] = "";
+        $_SESSION['password_error_message'] = "";
+        $_SESSION['registration_successful'] = "";
+        $_SESSION['username'] = '';
+        $_SESSION['email'] = '';
+        $_SESSION['password'] = '';
+        $_SESSION['type'] = '';
+        $_SESSION['auth_code'] = '';
     }
 
     ?>

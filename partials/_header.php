@@ -13,6 +13,9 @@ echo '<nav class="navbar navbar-expand-lg">
         <div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
+                <li class="nav-item">
+                        <a class="nav-link fs-4 me-2" href="profile.php">Profile</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link fs-4 me-4" href="send_mail.php">Get Newsletter</a>
                     </li>
