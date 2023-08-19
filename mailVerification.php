@@ -17,7 +17,7 @@ session_start();
 $conn = "";
 $errors = 0;
 
-if ($_SERVER['REQUEST_METHOD'] === "POST") {
+if ($_SERVER['REQUEST_METHOD'] === "POST" && !isset($_SESSION['auth_code'])) {
     function test_input($data)
     {
         $data = trim($data);
