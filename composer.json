@@ -3,6 +3,7 @@
     "description": "A groundbreaking hub for tertiary education collaboration",
 
     "require": {
+        "php": ">=8.2",
         "sendgrid/sendgrid": "^8.0",
         "vlucas/phpdotenv": "^5.5"
     },
