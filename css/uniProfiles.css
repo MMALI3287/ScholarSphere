@@ -1,5 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Slabo+27px);
+@import "bourbon";
+
 body {
-  background-color: #f8f9fa;
+  font-family: "Roboto", sans-serif;
+  background: #cb607475;
 }
 
 .container {
@@ -11,20 +15,25 @@ body {
 }
 
 .university-card {
-  display: block;
+  height: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
-  background-color: #ffffff;
-  padding: 20px;
-  border: 1px solid #dee2e6;
+  background-color: #cb607475;
+  border: 2px solid #cb6074;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   color: #333;
+  cursor: pointer;
 }
 
 .university-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.269);
 }
 
 .university-card img {
@@ -35,4 +44,87 @@ body {
 
 .university-card h3 {
   font-size: 18px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 30px;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+}
+.blog-wrapper {
+  .blog-card {
+    @include transition(0.3s);
+    max-width: 300px;
+    margin: 15px;
+    background: #fff;
+    border: 1px solid #cb6074;
+    text-align: center;
+    &:hover {
+      box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+    .card-img {
+      position: relative;
+      text-align: center;
+      background: #cb6074;
+      img {
+        @include transition(0.3s);
+        max-height: 180px;
+        width: 100%;
+        border-bottom: 4px solid #cb6074;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        margin-left: -10px;
+        width: 0;
+        height: 0;
+        border-top: solid 10px #cb6074;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+      }
+      h1 {
+        position: absolute;
+        margin: 0;
+        font-size: 42px;
+        bottom: 15px;
+        width: 100%;
+        color: #fff;
+        font-family: "Slabo 27px", serif;
+      }
+    }
+    .card-details {
+      margin-top: 30px;
+      font-family: "Roboto", sans-serif;
+      color: #3c3c3c;
+      span {
+        padding: 0 30px;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+    .card-text {
+      padding: 30px 15px;
+      font-family: "Roboto", sans-serif;
+      line-height: 22px;
+    }
+    .read-more {
+      @include transition(0.3s);
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      text-transform: uppercase;
+      background: #cb6074;
+      color: #fff;
+      padding: 15px;
+      margin-bottom: 30px;
+      font-family: "Oswald", sans-serif;
+      &:hover {
+        background: darken(#cb6074, 20%);
+      }
+    }
+  }
 }

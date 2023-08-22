@@ -13,7 +13,7 @@
 
 <body>
 
-    <nav class="bg-dark sidebar">
+    <nav class="sidebar">
         <div class="position-sticky">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -62,16 +62,22 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9 sections ms-sm-auto">
+            <div class="col-md-12 sections ms-sm-auto">
                 <section id="overview">
                     <h2>Overview</h2>
-                    <p>East West University, established in [Year], is a pioneering institution committed to providing a transformative education that prepares students for leadership and innovation in a globalized world.</p>
-                    <p>The university prides itself on its vibrant learning community where diversity is celebrated and academic excellence is nurtured. Situated in the heart of [City], the campus provides a dynamic and inclusive environment for intellectual growth and personal development.</p>
-                    <p>East West University is dedicated to fostering a culture of critical thinking, creativity, and social responsibility.</p>
+                    <p>East West University, established in [Year], is a pioneering institution committed to providing a
+                        transformative education that prepares students for leadership and innovation in a globalized
+                        world.</p>
+                    <p>The university prides itself on its vibrant learning community where diversity is celebrated and
+                        academic excellence is nurtured. Situated in the heart of [City], the campus provides a dynamic
+                        and inclusive environment for intellectual growth and personal development.</p>
+                    <p>East West University is dedicated to fostering a culture of critical thinking, creativity, and
+                        social responsibility.</p>
                 </section>
                 <section id="rankings">
                     <h2>Rankings</h2>
-                    <p>East West University has garnered recognition for its commitment to academic excellence and impactful research.</p>
+                    <p>East West University has garnered recognition for its commitment to academic excellence and
+                        impactful research.</p>
                     <div class="ranking-list">
                         <h3>Recent Rankings:</h3>
                         <ul>
@@ -97,7 +103,9 @@
                 </section>
                 <section id="admission">
                     <h2>Admission Requirements</h2>
-                    <p>East West University welcomes passionate and ambitious students who seek to create a positive impact on society through education and innovation. Admission requirements vary based on the chosen program and academic level.</p>
+                    <p>East West University welcomes passionate and ambitious students who seek to create a positive
+                        impact on society through education and innovation. Admission requirements vary based on the
+                        chosen program and academic level.</p>
                     <p>For undergraduate admission, applicants typically need to provide:</p>
                     <ul>
                         <li>Completed online application form</li>
@@ -107,12 +115,15 @@
                         <li>Personal statement</li>
                         <li>Interview (if required)</li>
                     </ul>
-                    <p>Graduate programs have specific admission criteria, including academic records, relevant test scores, letters of recommendation, and a statement of purpose.</p>
-                    <p>Prospective students are encouraged to review the admission guidelines and deadlines for their desired program.</p>
+                    <p>Graduate programs have specific admission criteria, including academic records, relevant test
+                        scores, letters of recommendation, and a statement of purpose.</p>
+                    <p>Prospective students are encouraged to review the admission guidelines and deadlines for their
+                        desired program.</p>
                 </section>
                 <section id="faculty">
                     <h2>Faculty and Departments</h2>
-                    <p>East West University offers a wide range of academic disciplines and programs through its esteemed faculty and departments, including:</p>
+                    <p>East West University offers a wide range of academic disciplines and programs through its
+                        esteemed faculty and departments, including:</p>
                     <ul>
                         <li>
                             <strong>Faculty of Business</strong>
@@ -134,27 +145,35 @@
                         </li>
                         <!-- Add more faculties and departments here -->
                     </ul>
-                    <p>East West University is committed to providing students with a well-rounded and interdisciplinary education.</p>
+                    <p>East West University is committed to providing students with a well-rounded and interdisciplinary
+                        education.</p>
                 </section>
                 <section id="tuition">
                     <h2>Tuition and Scholarships</h2>
-                    <p>East West University is dedicated to making quality education accessible through a range of tuition fees and scholarship opportunities.</p>
+                    <p>East West University is dedicated to making quality education accessible through a range of
+                        tuition fees and scholarship opportunities.</p>
                     <h3>Tuition Fees</h3>
-                    <p>Tuition fees vary based on the program and academic level. As of the most recent data, the annual tuition fees for undergraduate programs at East West University are approximately:</p>
+                    <p>Tuition fees vary based on the program and academic level. As of the most recent data, the annual
+                        tuition fees for undergraduate programs at East West University are approximately:</p>
                     <ul>
                         <li>Full-time Undergraduate: $[Amount]</li>
                         <li>Part-time Undergraduate: $[Amount] per credit</li>
                     </ul>
                     <h3>Scholarships and Financial Aid</h3>
-                    <p>East West University offers merit-based and need-based scholarships to support students in pursuing their academic goals. Students are encouraged to explore scholarship opportunities and financial aid options during the application process.</p>
-                    <p>The university is committed to helping students achieve their potential and contribute to society.</p>
+                    <p>East West University offers merit-based and need-based scholarships to support students in
+                        pursuing their academic goals. Students are encouraged to explore scholarship opportunities and
+                        financial aid options during the application process.</p>
+                    <p>The university is committed to helping students achieve their potential and contribute to
+                        society.</p>
                 </section>
                 <section id="locations">
                     <h2>Campus Locations</h2>
                     <div id="map-container" class="pb-5">
-                        <div id="map" data-lat="[Latitude]" data-lng="[Longitude]" data-title="East West University Campus"></div>
+                        <div id="map" data-lat="[Latitude]" data-lng="[Longitude]"
+                            data-title="East West University Campus"></div>
                     </div>
-                    <p>East West University is situated in the vibrant city of [City], providing students with a stimulating and engaging environment for learning and exploration.</p>
+                    <p>East West University is situated in the vibrant city of [City], providing students with a
+                        stimulating and engaging environment for learning and exploration.</p>
                     <p>For detailed directions and to explore the campus on Google Maps,
                         <a href="[Google Maps Link]" target="_blank" rel="noopener noreferrer">click here</a>.
                     </p>
@@ -162,15 +181,24 @@
                 <section id="facilities">
                     <h2>Campus Facilities</h2>
                     <ul class="facilities-list">
-                        <li><i class="fas fa-book animated-icon"></i>Modern libraries with extensive collections of books, journals, and digital resources.</li>
-                        <li><i class="fas fa-flask animated-icon"></i>Research centers equipped for innovative and impactful research projects.</li>
-                        <li><i class="fas fa-microscope animated-icon"></i>Advanced laboratories for scientific experiments and technological advancements.</li>
-                        <li><i class="fas fa-paint-brush animated-icon"></i>Artistic spaces for creative expression and exploration.</li>
-                        <li><i class="fas fa-dumbbell animated-icon"></i>Recreational facilities promoting physical fitness and well-being.</li>
-                        <li><i class="fas fa-home animated-icon"></i>Residential accommodations fostering a close-knit campus community.</li>
-                        <li><i class="fas fa-utensils animated-icon"></i>Diverse dining options catering to different tastes and preferences.</li>
-                        <li><i class="fas fa-users animated-icon"></i>Collaborative areas for group projects, discussions, and academic interactions.</li>
-                        <li><i class="fas fa-hospital animated-icon"></i>Student support services including counseling and career guidance.</li>
+                        <li><i class="fas fa-book animated-icon"></i>Modern libraries with extensive collections of
+                            books, journals, and digital resources.</li>
+                        <li><i class="fas fa-flask animated-icon"></i>Research centers equipped for innovative and
+                            impactful research projects.</li>
+                        <li><i class="fas fa-microscope animated-icon"></i>Advanced laboratories for scientific
+                            experiments and technological advancements.</li>
+                        <li><i class="fas fa-paint-brush animated-icon"></i>Artistic spaces for creative expression and
+                            exploration.</li>
+                        <li><i class="fas fa-dumbbell animated-icon"></i>Recreational facilities promoting physical
+                            fitness and well-being.</li>
+                        <li><i class="fas fa-home animated-icon"></i>Residential accommodations fostering a close-knit
+                            campus community.</li>
+                        <li><i class="fas fa-utensils animated-icon"></i>Diverse dining options catering to different
+                            tastes and preferences.</li>
+                        <li><i class="fas fa-users animated-icon"></i>Collaborative areas for group projects,
+                            discussions, and academic interactions.</li>
+                        <li><i class="fas fa-hospital animated-icon"></i>Student support services including counseling
+                            and career guidance.</li>
                     </ul>
                 </section>
             </div>
@@ -179,7 +207,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTR26_-VtI2fhWyKGnoYv_uKNJnl4p_2w&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTR26_-VtI2fhWyKGnoYv_uKNJnl4p_2w&callback=initMap"
+        async defer></script>
     <script src="../js/demoUni.js"></script>
 </body>
 

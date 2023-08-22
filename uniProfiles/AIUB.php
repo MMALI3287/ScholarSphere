@@ -17,7 +17,7 @@ require 'MapsDB.php';
 
 <body>
 
-    <nav class="bg-dark sidebar">
+    <nav class="sidebar">
         <div class="position-sticky">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -61,21 +61,28 @@ require 'MapsDB.php';
                 <h1>American International University Bangladesh</h1>
                 <p>Premier private university committed to global excellence</p>
             </div>
-            <div class="col-md-2"><img src="../assets/images/aiub.jpg" alt="aiub"></div>
+            <div class="col-md-2"><img src="../assets/images/aiub.webp" alt="aiub"></div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9 sections ms-sm-auto">
+            <div class="col-md-12 sections ms-sm-auto">
                 <section id="overview">
                     <h2>Overview</h2>
-                    <p>American International University Bangladesh (AIUB) is a leading private institution known for its commitment to providing quality education and fostering a global perspective. Established in [Year], AIUB offers a diverse range of academic programs that empower students for success in a dynamic world.</p>
-                    <p>The university prides itself on its vibrant and multicultural community, where students from various backgrounds come together to learn, innovate, and contribute to society. AIUB's campus is located in [City], offering a conducive environment for academic and personal growth.</p>
-                    <p>AIUB is dedicated to equipping its graduates with the skills, knowledge, and values needed to excel in their chosen fields and make a positive impact on the global stage.</p>
+                    <p>American International University Bangladesh (AIUB) is a leading private institution known for
+                        its commitment to providing quality education and fostering a global perspective. Established in
+                        [Year], AIUB offers a diverse range of academic programs that empower students for success in a
+                        dynamic world.</p>
+                    <p>The university prides itself on its vibrant and multicultural community, where students from
+                        various backgrounds come together to learn, innovate, and contribute to society. AIUB's campus
+                        is located in [City], offering a conducive environment for academic and personal growth.</p>
+                    <p>AIUB is dedicated to equipping its graduates with the skills, knowledge, and values needed to
+                        excel in their chosen fields and make a positive impact on the global stage.</p>
                 </section>
                 <section id="rankings">
                     <h2>Rankings</h2>
-                    <p>American International University Bangladesh has earned recognition for its academic excellence and commitment to providing quality education.</p>
+                    <p>American International University Bangladesh has earned recognition for its academic excellence
+                        and commitment to providing quality education.</p>
                     <div class="ranking-list">
                         <h3>Recent Rankings:</h3>
                         <ul>
@@ -101,8 +108,10 @@ require 'MapsDB.php';
                 </section>
                 <section id="admission">
                     <h2>Admission Requirements</h2>
-                    <p>AIUB seeks to admit talented and motivated students who are passionate about learning and personal growth. Admission requirements vary based on the chosen program and academic level.</p>
-                    <p>To apply for undergraduate admission, applicants typically need to submit the following materials:</p>
+                    <p>AIUB seeks to admit talented and motivated students who are passionate about learning and
+                        personal growth. Admission requirements vary based on the chosen program and academic level.</p>
+                    <p>To apply for undergraduate admission, applicants typically need to submit the following
+                        materials:</p>
                     <ul>
                         <li>Completed online application form</li>
                         <li>High school transcripts</li>
@@ -111,12 +120,16 @@ require 'MapsDB.php';
                         <li>Personal statement</li>
                         <li>Interview (optional)</li>
                     </ul>
-                    <p>Graduate programs have specific admission criteria, including relevant test scores, academic transcripts, letters of recommendation, and a statement of purpose.</p>
-                    <p>Prospective students are encouraged to review the admission guidelines and deadlines for their desired program.</p>
+                    <p>Graduate programs have specific admission criteria, including relevant test scores, academic
+                        transcripts, letters of recommendation, and a statement of purpose.</p>
+                    <p>Prospective students are encouraged to review the admission guidelines and deadlines for their
+                        desired program.</p>
                 </section>
                 <section id="faculty">
                     <h2>Faculty and Departments</h2>
-                    <p>American International University Bangladesh boasts a diverse and accomplished faculty, offering a wide range of academic programs and disciplines. Some of the departments and subjects offered at AIUB include:</p>
+                    <p>American International University Bangladesh boasts a diverse and accomplished faculty, offering
+                        a wide range of academic programs and disciplines. Some of the departments and subjects offered
+                        at AIUB include:</p>
                     <ul>
                         <li>
                             <strong>Faculty of Business Administration</strong>
@@ -138,20 +151,26 @@ require 'MapsDB.php';
                         </li>
                         <!-- Add more departments and subjects here -->
                     </ul>
-                    <p>AIUB is dedicated to providing students with a comprehensive and enriching educational experience, guided by accomplished scholars and experts in their respective fields.</p>
+                    <p>AIUB is dedicated to providing students with a comprehensive and enriching educational
+                        experience, guided by accomplished scholars and experts in their respective fields.</p>
                 </section>
                 <section id="tuition">
                     <h2>Tuition and Scholarships</h2>
-                    <p>American International University Bangladesh is committed to making quality education accessible through a range of tuition fees and scholarship opportunities.</p>
+                    <p>American International University Bangladesh is committed to making quality education accessible
+                        through a range of tuition fees and scholarship opportunities.</p>
                     <h3>Tuition Fees</h3>
-                    <p>Tuition fees can vary based on the program and academic level. As of the most recent data, the annual tuition fees for undergraduate programs at AIUB are approximately:</p>
+                    <p>Tuition fees can vary based on the program and academic level. As of the most recent data, the
+                        annual tuition fees for undergraduate programs at AIUB are approximately:</p>
                     <ul>
                         <li>Full-time Undergraduate: $[Amount]</li>
                         <li>Part-time Undergraduate: $[Amount] per credit</li>
                     </ul>
                     <h3>Scholarships and Financial Aid</h3>
-                    <p>AIUB offers merit-based and need-based scholarships to support students in pursuing their academic goals. Students are encouraged to explore scholarship opportunities and financial aid options during the application process.</p>
-                    <p>The university is committed to helping students manage the cost of education and invest in their future success.</p>
+                    <p>AIUB offers merit-based and need-based scholarships to support students in pursuing their
+                        academic goals. Students are encouraged to explore scholarship opportunities and financial aid
+                        options during the application process.</p>
+                    <p>The university is committed to helping students manage the cost of education and invest in their
+                        future success.</p>
                 </section>
                 <?php
                 $result = getData('AIUB Campus');
@@ -172,19 +191,28 @@ require 'MapsDB.php';
                     <a href="' . $url . '" target="_blank" rel="noopener noreferrer">click here</a>.
                 </p>
             </section>'
-                ?>
+                    ?>
                 <section id="facilities">
                     <h2>Campus Facilities</h2>
                     <ul class="facilities-list">
-                        <li><i class="fas fa-book animated-icon"></i>Modern libraries with extensive collections of books, journals, and digital resources.</li>
-                        <li><i class="fas fa-flask animated-icon"></i>Advanced research centers equipped with cutting-edge technology for interdisciplinary studies.</li>
-                        <li><i class="fas fa-microscope animated-icon"></i>Well-equipped laboratories for scientific and technical research.</li>
-                        <li><i class="fas fa-paint-brush animated-icon"></i>Art studios and creative spaces for artistic expression.</li>
-                        <li><i class="fas fa-dumbbell animated-icon"></i>Recreational facilities for sports, fitness, and wellness.</li>
-                        <li><i class="fas fa-home animated-icon"></i>Residential accommodations fostering a vibrant campus community.</li>
-                        <li><i class="fas fa-utensils animated-icon"></i>Dining options offering a variety of cuisines.</li>
-                        <li><i class="fas fa-users animated-icon"></i>Collaborative spaces for group projects and academic discussions.</li>
-                        <li><i class="fas fa-hospital animated-icon"></i>Support services including counseling and career development.</li>
+                        <li><i class="fas fa-book animated-icon"></i>Modern libraries with extensive collections of
+                            books, journals, and digital resources.</li>
+                        <li><i class="fas fa-flask animated-icon"></i>Advanced research centers equipped with
+                            cutting-edge technology for interdisciplinary studies.</li>
+                        <li><i class="fas fa-microscope animated-icon"></i>Well-equipped laboratories for scientific and
+                            technical research.</li>
+                        <li><i class="fas fa-paint-brush animated-icon"></i>Art studios and creative spaces for artistic
+                            expression.</li>
+                        <li><i class="fas fa-dumbbell animated-icon"></i>Recreational facilities for sports, fitness,
+                            and wellness.</li>
+                        <li><i class="fas fa-home animated-icon"></i>Residential accommodations fostering a vibrant
+                            campus community.</li>
+                        <li><i class="fas fa-utensils animated-icon"></i>Dining options offering a variety of cuisines.
+                        </li>
+                        <li><i class="fas fa-users animated-icon"></i>Collaborative spaces for group projects and
+                            academic discussions.</li>
+                        <li><i class="fas fa-hospital animated-icon"></i>Support services including counseling and
+                            career development.</li>
                     </ul>
                 </section>
             </div>
@@ -193,7 +221,8 @@ require 'MapsDB.php';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTR26_-VtI2fhWyKGnoYv_uKNJnl4p_2w&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTR26_-VtI2fhWyKGnoYv_uKNJnl4p_2w&callback=initMap"
+        async defer></script>
     <script src="../js/demoUni.js"></script>
 </body>
 

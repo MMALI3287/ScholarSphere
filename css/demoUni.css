@@ -3,7 +3,7 @@
 /* Overall styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+  background-color: #ff9100b7;
 }
 
 .container-fluid {
@@ -12,7 +12,7 @@ body {
 }
 
 .header {
-  background-color: #6e6e6e;
+  background-color: #03045e;
   color: #ffffff;
   width: 100%;
   padding: 20px;
@@ -56,9 +56,10 @@ body {
   left: 0;
   z-index: 1000;
   padding: 20px;
-  background-color: #191a1b;
+  background-color: #fba22f;
   color: #ffffff;
   width: 30vh;
+  overflow-y: auto;
 }
 
 .sidebar ul.nav.flex-column {
@@ -69,26 +70,20 @@ body {
 .nav-link {
   color: #ffffff;
   font-size: 1.5rem;
+  transform: 0.5s;
 }
 
 .nav-link:hover {
-  color: #ffc107;
+  color: #03045e;
   font-size: 1.7rem;
 }
 
-/* Right side content styling */
-main {
-  margin-left: 250px; /* Adjust as needed to match the sidebar width */
-  padding: 30px;
-  padding-left: 300px; /* Add this line to push content to the right */
-}
-
 section {
-  margin-top: 30px;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 30px 10vh 30px 40vh;
 }
 
 h2 {
@@ -98,19 +93,6 @@ h2 {
 
 p {
   color: #6c757d;
-}
-
-/* Left side navigation styling */
-.sidebar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
-  padding: 20px;
-  background-color: #343a40;
-  color: #ffffff;
-  overflow-y: auto; /* Add this line to enable scrolling within the sidebar */
 }
 
 #overview {
@@ -172,4 +154,69 @@ p {
   font-size: 1.5rem;
   color: #191a1b;
   margin-right: 10px;
+}
+
+section p a {
+  text-decoration: none;
+  color: #ff9100;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+section p a:hover {
+  font-size: 1.7rem;
+  color: #03045e;
+}
+
+@media (max-width: 1550px) {
+  .sidebar {
+    display: none;
+  }
+  .header {
+    padding-left: 5vh;
+  }
+
+  section {
+    margin: 30px 15vh;
+  }
+}
+
+@media (max-width: 1100px) {
+  section {
+    margin: 30px 5vh;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .header img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 780px) {
+  .header img {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    margin: 30px 2vh;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  .header p {
+    font-size: 0.8rem;
+  }
 }

@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University List</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <?php include 'partials/_bootstrapcss.php'; ?>
     <link rel="stylesheet" href="css/uniProfiles.css">
 </head>
 
 <body>
-
-    <div class="container">
-        <h1 class="text-center mb-4">Explore Universities</h1>
+    <?php include 'partials/_header.php'; ?>
+    <div class="container bg">
+        <h1 class="text-center mb-4 pt-5 h1">Explore Universities</h1>
         <div class="row university-row">
 
         </div>
@@ -90,7 +90,8 @@
             </div>
             <div class="col-md-3">
                 <a href="uniProfiles/IUBAT.php" class="university-card">
-                    <img src="assets/images/iubat.jpg" alt="International University of Business Agriculture and Technology">
+                    <img src="assets/images/iubat.jpg"
+                        alt="International University of Business Agriculture and Technology">
                     <h3>International University of Business Agriculture and Technology</h3>
                 </a>
             </div>
@@ -149,8 +150,10 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <?php
+    include 'partials/_footer.php';
+    include 'partials/_bootstrapjs.php';
+    ?>
 </body>
 
 </html>

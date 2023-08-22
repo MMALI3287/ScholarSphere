@@ -12,35 +12,147 @@
 
 /* Styles for the pop-up content */
 .popup-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  height: 450px;
+  width: 700px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.651);
+  border-radius: 12px;
+}
+
+#verifyButton {
+  margin-top: 20px;
+  background-color: #fba32fed;
+  border-color: #fba22f;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  border-radius: 8px;
+  width: 48%;
+  justify-content: center;
+}
+
+#verifyButton:hover {
+  background-color: #ff910089;
+}
+
+#closePopupBtn {
+  margin-top: 20px;
+  background-color: #fba32fed;
+  border-color: #fba22f;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  border-radius: 8px;
+  width: 48%;
+  justify-content: center;
+}
+
+#closePopupBtn:hover {
+  background-color: #ff910089;
+}
+
+#verificationCode {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  border-radius: 8px;
+  width: 96%;
+}
+
+#verificationError {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  border-radius: 8px;
 }
 
 .content {
-  background-color: blanchedalmond;
+  background-color: rgba(0, 0, 0, 0.236);
   width: 85%;
   margin-top: 15vh;
   height: 70vh;
 }
 
-.col-md-5.login-form {
+.col-md-12.login-form {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5%;
-  background-color: blanchedalmond;
 }
 
-img.loginimage {
-  height: 70vh;
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
-body {
-  background-image: url(https://w0.peakpx.com/wallpaper/62/147/HD-wallpaper-dark-abstract-background-neon-lines-dark-lines-background-creative-abstraction-geometric-backgrounds.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+.form-label {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #fba32fed;
+  border-color: #fba22f;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  border-radius: 8px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.btn-primary:hover {
+  background-color: #ff910089;
+  border-color: #ff9100;
+  color: #03055ed5;
+}
+
+.error-red {
+  color: red;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  border-radius: 8px;
+}
+
+.anchor {
+  text-decoration: none;
+  color: #7e80fb;
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  border-radius: 8px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.anchor:hover {
+  -webkit-text-stroke: 2px #ff9100;
+  color: transparent;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
 }

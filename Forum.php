@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <?php include 'partials/_bootstrapcss.php'; ?>
     <link rel="stylesheet" href="css/forum.css">
 </head>
 
@@ -15,7 +15,7 @@
     <?php
     include 'partials/_header.php';
     ?>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide mt-5 pt-4" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -23,13 +23,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="https://source.unsplash.com/1920x500/?Forum,University" alt="First slide" />
+                <img class="d-block w-100" src="assets/images/slide1.jpg" alt="First slide" />
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://source.unsplash.com/1920x500/?Blog,University" alt="Second slide" />
+                <img class="d-block w-100" src="assets/images/slide2.jpg" alt="Second slide" />
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="https://source.unsplash.com/1920x500/?Discussion,University" alt="Third slide" />
+                <img class="d-block w-100" src="assets/images/slide3.jpg" alt="Third slide" />
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -43,8 +43,8 @@
     </div>
 
     <div class="container mt-5">
-        <h2 class="text-center">Explore Categories</h2>
-        <div class="row">
+        <h2 id="heading">Explore Categories</h2>
+        <div class="row ">
             <?php
 
             $conn = connect();
@@ -58,7 +58,8 @@
 
                 while ($row = mysqli_fetch_assoc($result)) {
                     $category = array(
-                        'id' => $row['category_id'], // Add category ID
+                        'id' => $row['category_id'],
+                        // Add category ID
                         'name' => $row['category_name'],
                         'subcategories' => array(),
                     );
@@ -72,7 +73,8 @@
                     } else {
                         while ($subrow = mysqli_fetch_assoc($subcategoryResult)) {
                             $category['subcategories'][] = array(
-                                'id' => $subrow['subcategory_id'], // Add subcategory ID
+                                'id' => $subrow['subcategory_id'],
+                                // Add subcategory ID
                                 'name' => $subrow['subcategory_name'],
                             );
                         }
@@ -82,9 +84,11 @@
                 }
 
                 foreach ($categories as $category) {
-                    echo '<div class="col-md-6">';
+                    echo '<div class="col-md-4">';
                     echo '<div class="card mb-4">';
                     echo '<div class="card-body">';
+                    echo '<img class="d-block w-100" src="https://source.unsplash.com/500x300/?' . $category['name'] . ',University"
+                    alt="Third slide" />';
                     echo '<h5 class="card-title">' . $category['name'] . '</h5>';
                     echo '<ul class="list-unstyled">';
                     foreach ($category['subcategories'] as $subcategory) {
@@ -93,19 +97,33 @@
                     echo '</ul></div></div></div>';
                 }
             }
+            if (!isset($_SESSION['id'])) {
+
+                session_start();
+            }
+            $id = $_SESSION['id'];
+            $query = "SELECT type FROM users WHERE id= $id";
+            $conn = connect();
+            $result = mysqli_query($conn, $query);
+            $row = mysqli_fetch_assoc($result);
+            $type = $row['type'];
+            $_SESSION['type'] = $type;
+            $query = "SELECT verified FROM $type WHERE user_id=$id";
+            $result = mysqli_query($conn, $query);
+            $row = mysqli_fetch_assoc($result);
+            $verified = $row['verified'];
+            if ($type != "admission_candidates" && $verified) {
+                echo '<a href="publishPost.php"><button type="button" class="btn btn-primary mb-5">Create Post</button></a>';
+            }
             ?>
-            <a href="publishPost.php"><button type="submit" class="btn btn-primary">Create Post</button></a>
         </div>
     </div>
 
 
     <?php
     include 'partials/_footer.php';
+    include 'partials/_bootstrapjs.php';
     ?>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 

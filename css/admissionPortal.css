@@ -1,6 +1,6 @@
 /* Additional custom styling for the admission portal */
 body {
-  background-color: #f8f9fa;
+  background-color: #fba22f;
   font-family: Arial, sans-serif;
 }
 
@@ -10,7 +10,7 @@ body {
 
 .card {
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -21,9 +21,9 @@ body {
 }
 
 .card-header {
-  background-color: #343a40;
-  color: #fff;
-  border-radius: 10px 10px 0 0;
+  background-color: #343a409f;
+  color: #ffffff13;
+  border-radius: 20px;
   padding: 15px;
 }
 
@@ -34,7 +34,8 @@ body {
 
 .card-body {
   padding: 20px;
-  background-color: #ffffff;
+  border-radius: 10px;
+  background: #ffffff23;
 }
 
 .card-body .university-info {

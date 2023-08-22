@@ -12,7 +12,9 @@ $ipapikey = $_ENV['IPINFO_API_KEY'];
 
 use SendGrid\Mail\Mail;
 
-session_start();
+if (!isset($_SESSION['id'])) {
+    session_start();
+}
 
 $conn = "";
 $errors = 0;
@@ -40,10 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && !isset($_SESSION['auth_code'])) {
             $sql = "SELECT id FROM users WHERE username = '" . $username . "'";
             $res = mysqli_query($conn, $sql);
             if ($res->num_rows > 0) {
-                $_SESSION['username_error_message'] =  "Username already exists";
+                $_SESSION['username_error_message'] = "Username already exists";
                 $errors++;
             } else {
-                $_SESSION['username_error_message'] =  "";
+                $_SESSION['username_error_message'] = "";
                 $_SESSION['username'] = $username;
             }
         }
@@ -57,10 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && !isset($_SESSION['auth_code'])) {
             $sql = "SELECT id FROM users WHERE email = '" . $email . "'";
             $res = mysqli_query($conn, $sql);
             if ($res->num_rows > 0) {
-                $_SESSION['email_error_message'] =  "Email already exists";
+                $_SESSION['email_error_message'] = "Email already exists";
                 $errors++;
             } else {
-                $_SESSION['email_error_message'] =  "";
+                $_SESSION['email_error_message'] = "";
                 $_SESSION['email'] = $email;
             }
         }
@@ -71,9 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && !isset($_SESSION['auth_code'])) {
     } else {
         $uppercase = preg_match('@[A-Z]@', $password);
         $lowercase = preg_match('@[a-z]@', $password);
-        $number    = preg_match('@[0-9]@', $password);
+        $number = preg_match('@[0-9]@', $password);
         $specialChars = preg_match('@[^\w]@', $password);
-        if (!$uppercase || !$lowercase ||  !$number ||  !$specialChars ||  strlen($password) < 8) {
+        if (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
             $_SESSION['password_error_message'] = "Password length > 8 characters, include upper case, lower case, number, special character.";
             $errors++;
         } else {
@@ -194,13 +196,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && !isset($_SESSION['auth_code'])) {
 
         try {
             $response = $sendgrid->send($email);
-
-            // Clear the session variables used for email verification
-            $_SESSION['auth_code'] = '';
-            $_SESSION['username'] = '';
-            $_SESSION['email'] = '';
-
-            // Redirect to the signup page and open the verification modal
             header("Location: signup.php#verifyModal");
             exit();
         } catch (Exception $e) {

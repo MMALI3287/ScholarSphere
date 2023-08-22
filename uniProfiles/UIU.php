@@ -13,7 +13,7 @@
 
 <body>
 
-    <nav class="bg-dark sidebar">
+    <nav class="sidebar">
         <div class="position-sticky">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -62,16 +62,22 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9 sections ms-sm-auto">
+            <div class="col-md-12 sections ms-sm-auto">
                 <section id="overview">
                     <h2>Overview</h2>
-                    <p>United International University (UIU) is a leading educational institution dedicated to fostering academic excellence and personal growth. Established in [Year], UIU offers a wide range of academic programs designed to prepare students for success in a rapidly changing world.</p>
-                    <p>The university's commitment to innovation and collaboration is evident in its diverse and inclusive community. Situated in [City], UIU's campus provides a dynamic and stimulating environment for learning and exploration.</p>
-                    <p>UIU is dedicated to nurturing the talents and ambitions of its students, equipping them to become global leaders and change-makers.</p>
+                    <p>United International University (UIU) is a leading educational institution dedicated to fostering
+                        academic excellence and personal growth. Established in [Year], UIU offers a wide range of
+                        academic programs designed to prepare students for success in a rapidly changing world.</p>
+                    <p>The university's commitment to innovation and collaboration is evident in its diverse and
+                        inclusive community. Situated in [City], UIU's campus provides a dynamic and stimulating
+                        environment for learning and exploration.</p>
+                    <p>UIU is dedicated to nurturing the talents and ambitions of its students, equipping them to become
+                        global leaders and change-makers.</p>
                 </section>
                 <section id="rankings">
                     <h2>Rankings</h2>
-                    <p>United International University has earned recognition for its contributions to education, research, and community engagement.</p>
+                    <p>United International University has earned recognition for its contributions to education,
+                        research, and community engagement.</p>
                     <div class="ranking-list">
                         <h3>Recent Rankings:</h3>
                         <ul>
@@ -97,7 +103,9 @@
                 </section>
                 <section id="admission">
                     <h2>Admission Requirements</h2>
-                    <p>United International University seeks motivated and forward-thinking students who are eager to embark on a transformative educational journey. Admission requirements vary based on the chosen program and academic level.</p>
+                    <p>United International University seeks motivated and forward-thinking students who are eager to
+                        embark on a transformative educational journey. Admission requirements vary based on the chosen
+                        program and academic level.</p>
                     <p>To apply for undergraduate admission, applicants typically need to provide:</p>
                     <ul>
                         <li>Completed online application form</li>
@@ -107,12 +115,15 @@
                         <li>Statement of purpose</li>
                         <li>Interview (if required)</li>
                     </ul>
-                    <p>Graduate programs have specific admission criteria, including academic records, relevant test scores, letters of recommendation, and a research proposal.</p>
-                    <p>Prospective students are encouraged to review the admission guidelines and deadlines for their desired program.</p>
+                    <p>Graduate programs have specific admission criteria, including academic records, relevant test
+                        scores, letters of recommendation, and a research proposal.</p>
+                    <p>Prospective students are encouraged to review the admission guidelines and deadlines for their
+                        desired program.</p>
                 </section>
                 <section id="programs">
                     <h2>Academic Programs</h2>
-                    <p>United International University offers a diverse array of academic programs spanning various disciplines. Some of the programs include:</p>
+                    <p>United International University offers a diverse array of academic programs spanning various
+                        disciplines. Some of the programs include:</p>
                     <ul>
                         <li>
                             <strong>Faculty of Business Administration</strong>
@@ -134,19 +145,23 @@
                         </li>
                         <!-- Add more faculties and programs here -->
                     </ul>
-                    <p>UIU is committed to providing students with a well-rounded education that prepares them for success in their chosen fields.</p>
+                    <p>UIU is committed to providing students with a well-rounded education that prepares them for
+                        success in their chosen fields.</p>
                 </section>
                 <section id="tuition">
                     <h2>Tuition and Scholarships</h2>
-                    <p>United International University is dedicated to making quality education accessible through a range of tuition fees and scholarship opportunities.</p>
+                    <p>United International University is dedicated to making quality education accessible through a
+                        range of tuition fees and scholarship opportunities.</p>
                     <h3>Tuition Fees</h3>
-                    <p>Tuition fees can vary based on the program and academic level. As of the most recent data, the annual tuition fees for undergraduate programs at UIU are approximately:</p>
+                    <p>Tuition fees can vary based on the program and academic level. As of the most recent data, the
+                        annual tuition fees for undergraduate programs at UIU are approximately:</p>
                     <ul>
                         <li>Full-time Undergraduate: $[Amount]</li>
                         <li>Part-time Undergraduate: $[Amount] per credit</li>
                     </ul>
                     <h3>Scholarships and Financial Aid</h3>
-                    <p>UIU offers scholarships to recognize academic excellence and support deserving students. Students are encouraged to explore scholarship opportunities during the application process.</p>
+                    <p>UIU offers scholarships to recognize academic excellence and support deserving students. Students
+                        are encouraged to explore scholarship opportunities during the application process.</p>
                     <p>The university is committed to helping students achieve their educational and career goals.</p>
                 </section>
                 <section id="locations">
@@ -154,7 +169,8 @@
                     <div id="map-container" class="pb-5">
                         <div id="map" data-lat="[Latitude]" data-lng="[Longitude]" data-title="UIU Campus"></div>
                     </div>
-                    <p>United International University is located in [City], providing an energetic and inspiring setting for learning and growth.</p>
+                    <p>United International University is located in [City], providing an energetic and inspiring
+                        setting for learning and growth.</p>
                     <p>To navigate to the campus and explore nearby attractions, you can use Google Maps by clicking
                         <a href="[Google Maps Link]" target="_blank" rel="noopener noreferrer">here</a>.
                     </p>
@@ -163,14 +179,19 @@
                     <h2>Campus Facilities</h2>
                     <ul class="facilities-list">
                         <li><i class="fas fa-book animated-icon"></i>Modern libraries with extensive collections.</li>
-                        <li><i class="fas fa-flask animated-icon"></i>State-of-the-art laboratories for hands-on experiments.</li>
-                        <li><i class="fas fa-microscope animated-icon"></i>Research centers for innovation and discovery.</li>
-                        <li><i class="fas fa-paint-brush animated-icon"></i>Creative spaces for artistic expression.</li>
-                        <li><i class="fas fa-dumbbell animated-icon"></i>Recreational facilities for fitness and well-being.</li>
+                        <li><i class="fas fa-flask animated-icon"></i>State-of-the-art laboratories for hands-on
+                            experiments.</li>
+                        <li><i class="fas fa-microscope animated-icon"></i>Research centers for innovation and
+                            discovery.</li>
+                        <li><i class="fas fa-paint-brush animated-icon"></i>Creative spaces for artistic expression.
+                        </li>
+                        <li><i class="fas fa-dumbbell animated-icon"></i>Recreational facilities for fitness and
+                            well-being.</li>
                         <li><i class="fas fa-home animated-icon"></i>Residential accommodations for students.</li>
                         <li><i class="fas fa-utensils animated-icon"></i>Dining options with a variety of cuisines.</li>
                         <li><i class="fas fa-users animated-icon"></i>Collaborative areas for group projects.</li>
-                        <li><i class="fas fa-hospital animated-icon"></i>Support services, counseling, and health care.</li>
+                        <li><i class="fas fa-hospital animated-icon"></i>Support services, counseling, and health care.
+                        </li>
                     </ul>
                 </section>
             </div>
@@ -179,7 +200,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTR26_-VtI2fhWyKGnoYv_uKNJnl4p_2w&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTR26_-VtI2fhWyKGnoYv_uKNJnl4p_2w&callback=initMap"
+        async defer></script>
     <script src="../js/demoUni.js"></script>
 </body>
 

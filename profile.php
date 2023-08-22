@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (!isset($_SESSION['id'])) {
+    session_start();
+}
 
 // Check if user is logged in
 if (!isset($_SESSION['id'])) {
@@ -148,81 +150,96 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <?php include 'partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="css/profilestyle.css">
 </head>
 
 <body>
+    <?php include 'partials/_header.php'; ?>
     <div class="container mt-5">
-        <h1>My Profile</h1>
         <button type="button" class="btn btn-link edit-all-button mb-2">Edit All</button>
+        <h1 class="text-center mt-5 pt-5">My Profile</h1>
         <form method="post" enctype="multipart/form-data">
-            <?php foreach ($profile_data as $field_name => $field_value) : ?>
+            <?php foreach ($profile_data as $field_name => $field_value): ?>
                 <div class="form-group">
                     <div class="d-flex justify-content-between align-items-center">
-                        <label><?php echo ucwords(str_replace('_', ' ', $field_name)); ?>:</label>
-                        <button type="button" class="btn btn-link edit-button" data-field="<?php echo $field_name; ?>">Edit</button>
+                        <label class="fieldName">
+                            <?php echo ucwords(str_replace('_', ' ', $field_name)); ?>:
+                        </label>
                     </div>
-                    <?php if ($field_name === 'profile_picture') : ?>
-                        <img src="<?php echo $field_value; ?>" alt="Profile Picture" class="mb-2" style="max-width: 200px;" id="profile-picture-preview-<?php echo $id; ?>">
-                        <input type="file" class="form-control-file d-none" name="<?php echo $field_name; ?>" data-id="<?php echo $id; ?>">
-                    <?php elseif ($field_name === 'id_card') : ?>
-                        <img src="<?php echo $field_value; ?>" alt="ID Card" class="mb-2" style="max-width: 200px;" id="id-card-preview-<?php echo $id; ?>">
-                        <input type="file" class="form-control-file d-none" name="<?php echo $field_name; ?>" data-id="<?php echo $id; ?>">
-                    <?php elseif ($field_name === 'date_of_birth') : ?>
-                        <input type="date" class="form-control d-none" name="<?php echo $field_name; ?>" value="<?php echo $field_value; ?>">
-                    <?php elseif ($field_name === 'gender') : ?>
+                    <?php if ($field_name === 'profile_picture'): ?>
+                        <img src="<?php echo $field_value; ?>" alt="Profile Picture" class="mb-2" style="max-width: 200px;"
+                            id="profile-picture-preview-<?php echo $id; ?>">
+                        <input type="file" class="form-control-file d-none" name="<?php echo $field_name; ?>"
+                            data-id="<?php echo $id; ?>">
+                    <?php elseif ($field_name === 'id_card'): ?>
+                        <img src="<?php echo $field_value; ?>" alt="ID Card" class="mb-2" style="max-width: 200px;"
+                            id="id-card-preview-<?php echo $id; ?>">
+                        <input type="file" class="form-control-file d-none" name="<?php echo $field_name; ?>"
+                            data-id="<?php echo $id; ?>">
+                    <?php elseif ($field_name === 'date_of_birth'): ?>
+                        <input type="date" class="form-control d-none" name="<?php echo $field_name; ?>"
+                            value="<?php echo $field_value; ?>">
+                    <?php elseif ($field_name === 'gender'): ?>
                         <select class="form-control d-none" name="<?php echo $field_name; ?>">
-                            <option value="male" <?php if ($field_value === 'male') echo 'selected'; ?>>Male</option>
-                            <option value="female" <?php if ($field_value === 'female') echo 'selected'; ?>>Female</option>
-                            <option value="other" <?php if ($field_value === 'other') echo 'selected'; ?>>Other</option>
+                            <option value="male" <?php if ($field_value === 'male')
+                                echo 'selected'; ?>>Male</option>
+                            <option value="female" <?php if ($field_value === 'female')
+                                echo 'selected'; ?>>Female</option>
+                            <option value="other" <?php if ($field_value === 'other')
+                                echo 'selected'; ?>>Other</option>
                         </select>
-                    <?php elseif ($field_name === 'employment_status') : ?>
+                    <?php elseif ($field_name === 'employment_status'): ?>
                         <select class="form-control d-none" name="<?php echo $field_name; ?>">
-                            <option value="employed" <?php if ($field_value === 'employed') echo 'selected'; ?>>Employed</option>
-                            <option value="unemployed" <?php if ($field_value === 'unemployed') echo 'selected'; ?>>Unemployed</option>
+                            <option value="employed" <?php if ($field_value === 'employed')
+                                echo 'selected'; ?>>Employed</option>
+                            <option value="unemployed" <?php if ($field_value === 'unemployed')
+                                echo 'selected'; ?>>Unemployed
+                            </option>
                         </select>
-                    <?php else : ?>
-                        <input type="text" class="form-control d-none" name="<?php echo $field_name; ?>" value="<?php echo $field_value; ?>">
+                    <?php else: ?>
+                        <input type="text" class="form-control d-none" name="<?php echo $field_name; ?>"
+                            value="<?php echo $field_value; ?>">
                     <?php endif; ?>
-                    <span><?php echo $field_value; ?></span>
+                    <span id="spanfield" class="h3">
+                        <?php
+                        if ($field_name != 'profile_picture' && $field_name != 'id_card') {
+                            echo $field_value;
+                        }
+                        ?>
+                    </span>
                 </div>
             <?php endforeach; ?>
             <button type="submit" class="btn btn-primary d-none" id="save-button">Save</button>
         </form>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="mt-4 container mb-5">
+        <a href="login.php"><button type="button" class="buton">Sign Out</button></a>
+    </div>
+    <?php
+    include 'partials/_footer.php';
+    include 'partials/_bootstrapjs.php';
+    ?>
     <script>
-        const editButtons = document.querySelectorAll('.edit-button');
         const saveButton = document.getElementById('save-button');
         const editAllButton = document.querySelector('.edit-all-button');
 
         editAllButton.addEventListener('click', () => {
             const inputFields = document.querySelectorAll('.form-control');
             const spanFields = document.querySelectorAll('.form-group span'); // Select all <span> elements
+
             inputFields.forEach(field => {
                 field.classList.remove('d-none');
             });
+
             spanFields.forEach(span => {
                 span.classList.add('d-none'); // Hide the <span> elements
             });
+
             saveButton.classList.remove('d-none');
         });
-
-        editButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const field = button.getAttribute('data-field');
-                const inputField = document.querySelector(`[name="${field}"]`);
-                const spanField = inputField.previousElementSibling;
-
-                spanField.classList.add('d-none'); // Hide the <span> element
-                inputField.classList.remove('d-none');
-                saveButton.classList.remove('d-none');
-            });
-        });
     </script>
+
 
 </body>
 

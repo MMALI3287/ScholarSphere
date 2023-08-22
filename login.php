@@ -1,5 +1,20 @@
 <?php
-require 'loginAction.php'
+require 'loginAction.php';
+
+$_SESSION['id'] = '';
+$_SESSION['username'] = '';
+$_SESSION['type'] = '';
+
+// Auto-login with remember me cookie
+if (isset($_COOKIE['remember_me'])) {
+    $token = $_COOKIE['remember_me'];
+    $user_id = getUserIdFromToken($token);
+    if ($user_id) {
+        loginUser($user_id);
+        header("Location: Welcome.php");
+        exit; // Make sure to exit to prevent further execution
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -8,26 +23,24 @@ require 'loginAction.php'
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
+    <?php include 'partials/_bootstrapcss.php'; ?>
     <link rel="stylesheet" href="css/loginstyle.css" />
     <title>Login</title>
 </head>
 
 <body>
     <?php include 'partials/_header.php'; ?>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-        </symbol>
-    </svg>
-
+    <video autoplay loop muted plays-inline preload="auto" class="back-video">
+        <source src="assets/videos/rain.mp4" type="video/mp4">
+    </video>
     <div class="d-flex justify-content-center align-items-center">
         <div class="content">
             <div class="row">
-                <div class="col-md-7">
-                    <img class="loginimage" src="https://www.owatroldirect.co.uk/wp-content/uploads/2019/08/decorators-tools.jpg" alt="" height="100%">
+
+                <div class="col-md-12 mb-4 text-white">
+                    <h2 class="text-center h1 w-100 pt-5">Sign In Now</h2>
                 </div>
-                <div class="col-md-5 login-form">
+                <div class="col-md-12 login-form">
                     <form class="row" action="loginAction.php" method="POST" novalidate>
                         <?php
                         if (isset($_SESSION['login_error_message']) and !empty($_SESSION['login_error_message'])) {
@@ -63,8 +76,8 @@ require 'loginAction.php'
                         </div>
                         <div class="col-12 mb-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
+                                <input class="form-check-input h5" type="checkbox" id="rememberMe" name="rememberMe">
+                                <label class="form-check-label text-white h4" for="rememberMe">
                                     Remember Me
                                 </label>
                             </div>
@@ -72,12 +85,20 @@ require 'loginAction.php'
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary">Log in</button>
                         </div>
+                        <div class="col-12">
+                            <p class="text-center pt-3 text-white h3">Don't have an account? <a href="signup.php"
+                                    class="anchor">Sign
+                                    up</a></p>
+                        </div>
+                    </form>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/bootstrap.js"></script>
+    <?php
+    include 'partials/_bootstrapjs.php';
+    ?>
     <script src="js/index.js"></script>
 </body>
 

@@ -15,7 +15,10 @@
 <body>
 
     <?php include 'partials/_header.php'; ?>
-    <div class="header" style="background-image: url(assets/images/landing.png);">
+    <div class="header" style=" background-image: url(assets/images/landing.png);
+    @media (max-width: 1550px) { 
+    background-image: none !important;
+    background-color: #03045e !important;}">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -24,9 +27,13 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <div class="header" style="background-image: url(assets/images/landing2.png);">
+    <div class="text" style=" background-image: url(assets/images/landing2.png);
+    @media (max-width: 1550px) { 
+    background-image: none !important;
+    display: block !important;
+    background-color: #fba22f !important;
+    padding: 20px !important;}">
         <div class="container">
             <div class="row">
                 <h1 class="headerh2">Unlock Your Academic Universe</h1>
@@ -48,7 +55,12 @@
         </div>
     </div>
 
-    <div class="header" style="background-image: url(assets/images/landing3.png);">
+    <div class="text" style="background-image: url(assets/images/landing3.png);
+    @media (max-width: 1550px) { 
+    background-image: none !important;
+    display: block !important;
+    background-color: #fba22f !important;
+    padding: 20px !important;}">
         <div class="container">
             <div class="row">
                 <h1 class="headerh3">Key Features</h1>
@@ -70,7 +82,12 @@
         </div>
     </div>
 
-    <div class="header" style="background-image: url(assets/images/landing4.png);">
+    <div class="text" style="background-image: url(assets/images/landing4.png);
+    @media (max-width: 1550px) { 
+    background-image: none !important;
+    display: block !important;
+    background-color: #fba22f !important;
+    padding: 20px !important;}">
         <div class="container">
             <div class="row">
                 <h1 class="headerh4">Ready To Dive In?</h1>
@@ -78,16 +95,17 @@
                     <p class="headerp4"> Join ScholarSphere today and be a part of </p>
                     <p class="headerp4">the future of higher education. Embrace knowledge,</p>
                     <p class="headerp4 pb-5"> collaboration, and innovation right here, right now!</p><br>
-                    <a href="uniProfiles.php"><button type="button" class="explorebtn">Explore ScholarSphere</button></a>
+                    <a href="signup.php"><button type="button" class="explorebtn">Explore ScholarSphere</button></a>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="yellow"></div>
-    <?php include 'partials/_footer.php'; ?>
-
-    <script src="js/bootstrap.js"></script>
+    <?php
+    include 'partials/_footer.php';
+    include 'partials/_bootstrapjs.php';
+    ?>
     <script src="js/index.js"></script>
 </body>
 

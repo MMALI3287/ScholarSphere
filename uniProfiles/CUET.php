@@ -13,7 +13,7 @@
 
 <body>
 
-    <nav class="bg-dark sidebar">
+    <nav class="sidebar">
         <div class="position-sticky">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -62,16 +62,23 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-9 sections ms-sm-auto">
+            <div class="col-md-12 sections ms-sm-auto">
                 <section id="overview">
                     <h2>Overview</h2>
-                    <p>Chittagong University of Engineering and Technology (CUET) is a prestigious institution dedicated to advancing education and research in engineering, architecture, and planning. Established in [Year], CUET has earned a reputation for producing skilled graduates and contributing to technological innovation.</p>
-                    <p>The university's commitment to excellence is reflected in its rigorous academic programs, state-of-the-art facilities, and collaborative research initiatives. CUET's campus in [City] provides an environment conducive to intellectual growth and hands-on learning.</p>
-                    <p>CUET is dedicated to preparing its graduates to address complex challenges and make significant contributions to the fields of engineering and technology.</p>
+                    <p>Chittagong University of Engineering and Technology (CUET) is a prestigious institution dedicated
+                        to advancing education and research in engineering, architecture, and planning. Established in
+                        [Year], CUET has earned a reputation for producing skilled graduates and contributing to
+                        technological innovation.</p>
+                    <p>The university's commitment to excellence is reflected in its rigorous academic programs,
+                        state-of-the-art facilities, and collaborative research initiatives. CUET's campus in [City]
+                        provides an environment conducive to intellectual growth and hands-on learning.</p>
+                    <p>CUET is dedicated to preparing its graduates to address complex challenges and make significant
+                        contributions to the fields of engineering and technology.</p>
                 </section>
                 <section id="rankings">
                     <h2>Rankings</h2>
-                    <p>Chittagong University of Engineering and Technology has received recognition for its exceptional contributions to engineering education and research.</p>
+                    <p>Chittagong University of Engineering and Technology has received recognition for its exceptional
+                        contributions to engineering education and research.</p>
                     <div class="ranking-list">
                         <h3>Recent Rankings:</h3>
                         <ul>
@@ -97,7 +104,8 @@
                 </section>
                 <section id="admission">
                     <h2>Admission Requirements</h2>
-                    <p>CUET seeks to admit talented and dedicated students who are passionate about engineering and technology. Admission requirements vary depending on the chosen program and academic level.</p>
+                    <p>CUET seeks to admit talented and dedicated students who are passionate about engineering and
+                        technology. Admission requirements vary depending on the chosen program and academic level.</p>
                     <p>For undergraduate admission, applicants typically need to provide:</p>
                     <ul>
                         <li>Completed online application form</li>
@@ -107,12 +115,15 @@
                         <li>Statement of purpose</li>
                         <li>Interview (if applicable)</li>
                     </ul>
-                    <p>Graduate programs have specific admission criteria, including academic records, research proposal, letters of recommendation, and a statement of purpose.</p>
-                    <p>Prospective students are encouraged to review the admission guidelines and deadlines for their desired program.</p>
+                    <p>Graduate programs have specific admission criteria, including academic records, research
+                        proposal, letters of recommendation, and a statement of purpose.</p>
+                    <p>Prospective students are encouraged to review the admission guidelines and deadlines for their
+                        desired program.</p>
                 </section>
                 <section id="faculty">
                     <h2>Faculty and Departments</h2>
-                    <p>Chittagong University of Engineering and Technology offers a diverse range of engineering and architecture programs through its various faculties and departments, including:</p>
+                    <p>Chittagong University of Engineering and Technology offers a diverse range of engineering and
+                        architecture programs through its various faculties and departments, including:</p>
                     <ul>
                         <li>
                             <strong>Faculty of Civil Engineering</strong>
@@ -134,19 +145,23 @@
                         </li>
                         <!-- Add more faculties and departments here -->
                     </ul>
-                    <p>CUET is dedicated to providing students with a comprehensive and specialized education in engineering and technology.</p>
+                    <p>CUET is dedicated to providing students with a comprehensive and specialized education in
+                        engineering and technology.</p>
                 </section>
                 <section id="tuition">
                     <h2>Tuition and Scholarships</h2>
-                    <p>Chittagong University of Engineering and Technology offers a range of tuition fees and scholarship opportunities to support students' educational endeavors.</p>
+                    <p>Chittagong University of Engineering and Technology offers a range of tuition fees and
+                        scholarship opportunities to support students' educational endeavors.</p>
                     <h3>Tuition Fees</h3>
-                    <p>Tuition fees vary based on the program and academic level. As of the most recent data, the annual tuition fees for undergraduate programs at CUET are approximately:</p>
+                    <p>Tuition fees vary based on the program and academic level. As of the most recent data, the annual
+                        tuition fees for undergraduate programs at CUET are approximately:</p>
                     <ul>
                         <li>Full-time Undergraduate: $[Amount]</li>
                         <li>Part-time Undergraduate: $[Amount] per credit</li>
                     </ul>
                     <h3>Scholarships and Financial Aid</h3>
-                    <p>CUET provides scholarships and financial aid to meritorious and needy students. Scholarships are awarded based on academic achievements, leadership qualities, and financial circumstances.</p>
+                    <p>CUET provides scholarships and financial aid to meritorious and needy students. Scholarships are
+                        awarded based on academic achievements, leadership qualities, and financial circumstances.</p>
                     <p>The university is committed to making engineering education accessible to deserving students.</p>
                 </section>
                 <section id="locations">
@@ -154,7 +169,8 @@
                     <div id="map-container" class="pb-5">
                         <div id="map" data-lat="[Latitude]" data-lng="[Longitude]" data-title="CUET Campus"></div>
                     </div>
-                    <p>Chittagong University of Engineering and Technology is situated in the vibrant city of [City], offering students a dynamic and inspiring environment for academic pursuits.</p>
+                    <p>Chittagong University of Engineering and Technology is situated in the vibrant city of [City],
+                        offering students a dynamic and inspiring environment for academic pursuits.</p>
                     <p>For detailed directions and to explore the campus on Google Maps,
                         <a href="[Google Maps Link]" target="_blank" rel="noopener noreferrer">click here</a>.
                     </p>
@@ -162,15 +178,24 @@
                 <section id="facilities">
                     <h2>Campus Facilities</h2>
                     <ul class="facilities-list">
-                        <li><i class="fas fa-book animated-icon"></i>Modern libraries with extensive collections of technical literature and resources.</li>
-                        <li><i class="fas fa-flask animated-icon"></i>Advanced laboratories equipped for hands-on experimentation and research.</li>
-                        <li><i class="fas fa-microscope animated-icon"></i>Research centers fostering innovation and interdisciplinary collaboration.</li>
-                        <li><i class="fas fa-paint-brush animated-icon"></i>Design studios and creative spaces for architectural and engineering projects.</li>
-                        <li><i class="fas fa-dumbbell animated-icon"></i>Sports and fitness facilities promoting a healthy campus lifestyle.</li>
-                        <li><i class="fas fa-home animated-icon"></i>Residential accommodations providing a supportive living environment.</li>
-                        <li><i class="fas fa-utensils animated-icon"></i>Various dining options catering to students' dietary preferences.</li>
-                        <li><i class="fas fa-users animated-icon"></i>Collaborative spaces for group discussions and academic interactions.</li>
-                        <li><i class="fas fa-hospital animated-icon"></i>Student support services including counseling and career guidance.</li>
+                        <li><i class="fas fa-book animated-icon"></i>Modern libraries with extensive collections of
+                            technical literature and resources.</li>
+                        <li><i class="fas fa-flask animated-icon"></i>Advanced laboratories equipped for hands-on
+                            experimentation and research.</li>
+                        <li><i class="fas fa-microscope animated-icon"></i>Research centers fostering innovation and
+                            interdisciplinary collaboration.</li>
+                        <li><i class="fas fa-paint-brush animated-icon"></i>Design studios and creative spaces for
+                            architectural and engineering projects.</li>
+                        <li><i class="fas fa-dumbbell animated-icon"></i>Sports and fitness facilities promoting a
+                            healthy campus lifestyle.</li>
+                        <li><i class="fas fa-home animated-icon"></i>Residential accommodations providing a supportive
+                            living environment.</li>
+                        <li><i class="fas fa-utensils animated-icon"></i>Various dining options catering to students'
+                            dietary preferences.</li>
+                        <li><i class="fas fa-users animated-icon"></i>Collaborative spaces for group discussions and
+                            academic interactions.</li>
+                        <li><i class="fas fa-hospital animated-icon"></i>Student support services including counseling
+                            and career guidance.</li>
                     </ul>
                 </section>
             </div>
@@ -179,7 +204,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTR26_-VtI2fhWyKGnoYv_uKNJnl4p_2w&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTR26_-VtI2fhWyKGnoYv_uKNJnl4p_2w&callback=initMap"
+        async defer></script>
     <script src="../js/demoUni.js"></script>
 </body>
 

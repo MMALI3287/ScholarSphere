@@ -1,4 +1,13 @@
-<?php require 'connect.php'; ?>
+<?php
+
+if (!isset($_SESSION['id'])) {
+    session_start();
+}
+if (!isset($_SESSION['id'])) {
+    header("Location: login.php");
+}
+
+require 'connect.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <?php include 'partials/_bootstrapcss.php'; ?>
     <link rel="stylesheet" href="css/forum.css">
 </head>
 
@@ -16,12 +25,11 @@
     include 'partials/_header.php';
     ?>
 
-    <div class="container mt-5">
-        <!-- Display post details -->
+    <div class="container mt-5 pt-5">
         <?php
         $postId = $_GET['post_id']; // Adjust this based on how you pass the post ID
         $conn = connect(); // Assuming you have a connect function
-
+        
         $postQuery = "SELECT p.*, u.username, TIMESTAMPDIFF(SECOND, p.created_at, NOW()) AS time_elapsed
                   FROM forum_posts AS p
                   JOIN users AS u ON p.id = u.id
@@ -33,12 +41,12 @@
 
             // Calculate time elapsed
             $timeElapsed = calculateTimeElapsed($post['time_elapsed']); // You need to implement the calculateTimeElapsed function
+        
+            echo '<h2 class="text-white">' . $post['title'] . '</h2>';
+            echo '<h4>Posted by: ' . $post['username'] . ' ' . $timeElapsed . ' ago' . '</h4>';
+            echo '<h4>Posted on: ' . $post['created_at'] . '</h4>';
 
-            echo '<h2>' . $post['title'] . '</h2>';
-            echo '<p>Posted by: ' . $post['username'] . '  ' . $timeElapsed . '</p>';
-            echo '<p>Posted on: ' . $post['created_at'] . '</p>';
-
-            echo '<br><h5>' . $post['content'] . '</h5><br><hr>';
+            echo '<br><h3>' . $post['content'] . '</h3><br><hr>';
         }
         ?>
 
@@ -68,11 +76,11 @@
 
         if ($commentsResult && mysqli_num_rows($commentsResult) > 0) {
             while ($comment = mysqli_fetch_assoc($commentsResult)) {
-                echo '<div class="card mb-2">';
-                echo '<div class="card-body">';
+                echo '<div class="comm-card mb-2">';
+                echo '<div class="comm-card-body">';
                 echo '<h5 class="card-title">' . getUsernameById($comment['id']) . '</h5>';
                 echo '<p>' . $comment['comment_text'] . '</p>';
-                echo '<small class="text-muted">' . $comment['comment_date'] . '</small>';
+                echo '<small class="text-white">' . $comment['comment_date'] . '</small>';
                 echo '</div>';
                 echo '</div>';
             }
@@ -100,20 +108,21 @@
         <form action="addComment.php" method="post">
             <input type="hidden" name="post_id" value="<?php echo $postId; ?>">
             <input type="hidden" name="user_id" value="<?php
-                                                        session_start();
-                                                        $userId = $_SESSION['id'];
-                                                        echo $userId; ?>">
-            <textarea name="comment_text" class="form-control" placeholder="Add your comment" rows="4" required></textarea>
-            <button type="submit" class="btn btn-primary mt-2">Submit Comment</button>
+            if (!isset($_SESSION['id'])) {
+                session_start();
+            }
+            $userId = $_SESSION['id'];
+            echo $userId; ?>">
+            <textarea name="comment_text" class="form-control" placeholder="Add your comment" rows="4"
+                required></textarea>
+            <button type="submit" class="btn btn-primary mt-3 mb-5">Submit Comment</button>
         </form>
     </div>
 
     <?php
     include 'partials/_footer.php';
+    include 'partials/_bootstrapjs.php';
     ?>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/bootstrap.js"></script>
 </body>
 
 </html>

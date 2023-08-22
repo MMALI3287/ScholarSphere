@@ -6,7 +6,7 @@ const closePopupBtn = document.getElementById('closePopupBtn');
 const verifyButton = document.getElementById('verifyButton');
 const verificationCode = document.getElementById('verificationCode');
 const verificationError = document.getElementById('verificationError');
-const authCode = document.getElementById('authCode').innerText;
+const authCode = document.getElementById('authCode').innerText.trim();
 
 
 showPopupBtn.addEventListener('click', () => {
@@ -21,7 +21,7 @@ closePopupBtn.addEventListener('click', () => {
 });
 
 verifyButton.addEventListener('click', () => {
-    const enteredCode = verificationCode.value;
+    const enteredCode = verificationCode.value.trim();
 
     if (enteredCode === authCode) {
         window.location = 'signupAction.php';
