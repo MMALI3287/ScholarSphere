@@ -1,4 +1,7 @@
 {
+    "name": "scholar_sphere/0.1",
+    "description": "A groundbreaking hub for tertiary education collaboration",
+
     "require": {
         "sendgrid/sendgrid": "^8.0",
         "vlucas/phpdotenv": "^5.5"
