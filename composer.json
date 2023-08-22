@@ -2,5 +2,16 @@
     "require": {
         "sendgrid/sendgrid": "^8.0",
         "vlucas/phpdotenv": "^5.5"
-    }
+    },
+
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Musaddique Ali Erfan",
+            "email": "erfanali3287@gmail.com",
+            "homepage": "https://MMALI3287.github.io",
+            "role": "Developer"
+        }
+    ]
 }
