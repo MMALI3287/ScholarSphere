@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (!isset($_SESSION['id'])) {
+    session_start();
+}
 require 'connect.php'; // Include your database connection file
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

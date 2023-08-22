@@ -1,0 +1,49 @@
+/* Add a CSS animation */
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+body {
+  background-color: #cb607475;
+}
+
+.feature-card {
+  background-color: #fba22f;
+  border: 2px solid #ff8500;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 35vh;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 5rem;
+  color: #ff9100;
+}
+
+/* Style for images */
+.row img {
+  width: 100%;
+  border-radius: 10px;
+  animation: moveUpDown 3s infinite alternate;
+}
+
+/* Additional styling for text centering */
+.text-center {
+  text-align: center;
+}

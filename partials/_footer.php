@@ -1,28 +1,20 @@
-<?php
-echo '
 <div class="blue">
-<div class="container">
-    <div class="row">
-        <div class="col-md-4"> </div>
-        <div class="col-md-1">
-            <a href="#" class="fa fa-facebook"></a>
-        </div>
-        <div class="col-md-1">
-            <a href="#" class="fa fa-twitter"></a>
-        </div>
-        <div class="col-md-1">
-            <a href="#" class="fa fa-instagram"></a>
-        </div>
-        <div class="col-md-1">
-            <a href="#" class="fa fa-twitch"></a>
-        </div>
-        <div class="col-md-4"> </div>
-    </div>
-    <div class="row">
-        <div class="footer col-md-12">
-            © 2023 ScholarSphere. All rights reserved.
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://www.twitter.com/" class="fa fa-twitter"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                    <a href="https://www.twitch.com/" class="fa fa-twitch"></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<div class="footer-container">
+    <div></div>
+    <div class="footer">
+        © 2023 ScholarSphere. All rights reserved.
+    </div>
 </div>
-';
