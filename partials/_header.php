@@ -2,9 +2,9 @@
     <div class="container-fluid">
         <div class="d-flex justify-content-center align-items-center ms-2">
             <a href="index.php">
-                <img src="assets/images/logo.webp" alt="Logo" width="50" height="50" class="d-inline-block me-4">
+                <img src="assets/images/logo.png" alt="Logo" width="100" height="100" class="d-inline-block me-4">
             </a>
-            <a class="navbar-brand fs-2 align-text-center" href="welcome.php">
+            <a class="navbar-brand fs-1 align-text-center" href="Welcome.php">
                 ScholarSphere
             </a>
         </div>
@@ -16,11 +16,11 @@
                     }
                     if (isset($_SESSION['username']) && $_SESSION['username'] != '') { ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="profile.php">Your Profile</a>
+                            <a class="nav-link fs-2" href="profile.php">Your Profile</a>
                         </li>
                     <?php } else { ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="signup.php">Get Started</a>
+                            <a class="nav-link fs-2" href="signup.php">Get Started</a>
                         </li>
                     <?php } ?>
                 </ul>

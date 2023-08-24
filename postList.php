@@ -39,11 +39,12 @@
             <?php
             // Display posts
             while ($row = mysqli_fetch_assoc($result)) {
+                $contentPreview = substr($row['content'], 0, 170);
                 echo '<div class="col-md-6">
                 <div class="card mb-4">
                 <div class="card-body">
                 <h2 class="card-title"><a href="postDetail.php?post_id=' . $row['post_id'] . '" class="text-decoration-none">' . $row['title'] . '</a></h2>
-                <h4 class="card-text">' . $row['content'] . '</h4>
+                <h4 class="card-text">' . $contentPreview . '...' . '</h4>
                 </div></div></div>';
             }
             ?>

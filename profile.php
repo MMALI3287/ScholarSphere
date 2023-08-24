@@ -170,12 +170,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php if ($field_name === 'profile_picture'): ?>
                         <img src="<?php echo $field_value; ?>" alt="Profile Picture" class="mb-2" style="max-width: 200px;"
                             id="profile-picture-preview-<?php echo $id; ?>">
-                        <input type="file" class="form-control-file d-none" name="<?php echo $field_name; ?>"
+                        <input type="file" class="form-control-file file-input d-none" name="<?php echo $field_name; ?>"
                             data-id="<?php echo $id; ?>">
                     <?php elseif ($field_name === 'id_card'): ?>
                         <img src="<?php echo $field_value; ?>" alt="ID Card" class="mb-2" style="max-width: 200px;"
                             id="id-card-preview-<?php echo $id; ?>">
-                        <input type="file" class="form-control-file d-none" name="<?php echo $field_name; ?>"
+                        <input type="file" class="form-control-file file-input d-none" name="<?php echo $field_name; ?>"
                             data-id="<?php echo $id; ?>">
                     <?php elseif ($field_name === 'date_of_birth'): ?>
                         <input type="date" class="form-control d-none" name="<?php echo $field_name; ?>"
@@ -223,10 +223,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script>
         const saveButton = document.getElementById('save-button');
         const editAllButton = document.querySelector('.edit-all-button');
+        const fileInputs = document.querySelectorAll('.file-input');
 
         editAllButton.addEventListener('click', () => {
             const inputFields = document.querySelectorAll('.form-control');
             const spanFields = document.querySelectorAll('.form-group span'); // Select all <span> elements
+
 
             inputFields.forEach(field => {
                 field.classList.remove('d-none');
@@ -236,8 +238,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 span.classList.add('d-none'); // Hide the <span> elements
             });
 
+            fileInputs.forEach(fileInput => {
+                fileInput.classList.remove('d-none'); // Show the file input
+            });
+
+
             saveButton.classList.remove('d-none');
         });
+
+
+
     </script>
 
 

@@ -22,7 +22,9 @@ $email = new Mail();
 // Create a PDF document
 $pdf = new FPDF();
 $pdf->AddPage();
-$pdf->SetFont('Arial', 'B', 16);
+$pdf->AddFont('Poppins', 'B', 'Poppins-Bold.php');
+$pdf->AddFont('Poppins', 'BI', 'Poppins-BoldItalic.php');
+$pdf->SetFont('Poppins', 'BI', 20);
 $pdf->Cell(0, 10, 'Weekly Newsletter', 0, 1, 'C');
 
 $date = date("Y-m-d");
@@ -30,13 +32,14 @@ $sql = "SELECT * FROM admission_card WHERE application_deadline > '" . $date . "
 $conn = connect();
 $result = mysqli_query($conn, $sql);
 
-$pdf->SetFont('Arial', '', 12);
+$pdf->SetFont('Poppins', 'B', 14);
 $pdf->Ln(10);
-$pdf->Cell(0, 10, 'Admission Details:', 0, 1);
-
+$pdf->Cell(0, 10, 'Admission Details', 0, 1, 'C');
 while ($row = mysqli_fetch_assoc($result)) {
     $pdf->Ln(6);
-    $pdf->Cell(0, 10, 'University: ' . $row['varsity_name'], 0, 1);
+    $pdf->SetFont('Arial', 'I', 12);
+    $pdf->Cell(0, 10, $row['varsity_name'], 0, 1, 'C');
+    $pdf->SetFont('Arial', '', 10);
     $pdf->Cell(0, 10, 'Application Deadline: ' . $row['application_deadline'], 0, 1);
     $pdf->Cell(0, 10, 'Admission Date: ' . $row['admission_date'], 0, 1);
     $pdf->Cell(0, 10, 'Result Publication Date: ' . $row['result_publication_date'], 0, 1);
@@ -49,27 +52,30 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 $lastWeekStart = date('Y-m-d', strtotime('-1 week'));
-$lastWeekEnd = date('Y-m-d');
+$lastWeekEnd = date('Y-m-d', strtotime('+1 day')); // Add one day to the current date
 $sqlForum = "SELECT forum_posts.*, users.username
             FROM forum_posts 
             JOIN users ON forum_posts.id = users.id
-            WHERE forum_posts.created_at BETWEEN '$lastWeekStart' AND '$lastWeekEnd'";
+            WHERE forum_posts.created_at BETWEEN '$lastWeekStart' AND '$lastWeekEnd' ORDER BY forum_posts.created_at DESC";
 $resultForum = mysqli_query($conn, $sqlForum);
 
-$pdf->SetFont('Arial', '', 12);
+$pdf->SetFont('Poppins', 'B', 14);
 $pdf->Ln(10);
-$pdf->Cell(0, 10, 'Forum Posts from Last Week:', 0, 1);
+$pdf->Cell(0, 10, 'Recent Forum Posts', 0, 1, 'C');
 
 while ($rowForum = mysqli_fetch_assoc($resultForum)) {
     $pdf->Ln(6);
-    $pdf->Cell(0, 10, 'Topic: ' . $rowForum['title'], 0, 1);
+    $pdf->SetFont('Arial', '', 12);
+    $pdf->Cell(0, 10, 'Topic: ' . $rowForum['title'], 0, 1, 'C');
+    $pdf->SetFont('Arial', '', 8);
     $pdf->Cell(0, 10, 'Author: ' . $rowForum['username'], 0, 1);
     $pdf->Cell(0, 10, 'Post Date: ' . $rowForum['created_at'], 0, 1);
-    $pdf->Cell(0, 10, 'Content: ' . $rowForum['content'], 0, 1);
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->MultiCell(0, 10, 'Content: ' . $rowForum['content'], 0, 'L');
     // Add more details as needed
 }
 
-$pdfFilePath = 'assets/newsletters/Newsletter '.$date.'.pdf';
+$pdfFilePath = 'assets/newsletters/Newsletter ' . $date . '.pdf';
 $pdf->Output($pdfFilePath, 'F');
 
 
@@ -93,16 +99,16 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 $email->addTos($toEmails);
 
-        $email->addContent(
-            'text/html',
-            '
+$email->addContent(
+    'text/html',
+    '
     <html>
     <body>
-        <p>Hello fellow Subscriber,</p>
+        <p>Hello Fellow Newsletter Subcriber,</p>
         <p>Here is your weekly newsletter</p>
     </body>
     </html>'
-        );
+);
 
 $current_time = time(); // Get the current Unix timestamp
 $email->setSendAt($current_time);
@@ -122,7 +128,6 @@ $headers = [
     'Content-Type' => 'application/json',
 ];
 
-$email->setFooter(true, "Footer", "<br><strong>Footer</strong>");
 
 // Tracking Settings
 $email->setClickTracking(true, true);
@@ -167,4 +172,3 @@ try {
 } catch (Exception $e) {
     echo 'Caught exception: ' . $e->getMessage() . "\n";
 }
-

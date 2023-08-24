@@ -4,17 +4,6 @@ require 'loginAction.php';
 $_SESSION['id'] = '';
 $_SESSION['username'] = '';
 $_SESSION['type'] = '';
-
-// Auto-login with remember me cookie
-if (isset($_COOKIE['remember_me'])) {
-    $token = $_COOKIE['remember_me'];
-    $user_id = getUserIdFromToken($token);
-    if ($user_id) {
-        loginUser($user_id);
-        header("Location: Welcome.php");
-        exit; // Make sure to exit to prevent further execution
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +80,6 @@ if (isset($_COOKIE['remember_me'])) {
                                     up</a></p>
                         </div>
                     </form>
-                    </form>
                 </div>
             </div>
         </div>
@@ -100,6 +88,34 @@ if (isset($_COOKIE['remember_me'])) {
     include 'partials/_bootstrapjs.php';
     ?>
     <script src="js/index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            <?php
+            if (isset($_COOKIE['remember_me'])) {
+                $token = $_COOKIE['remember_me'];
+                $user_id = getUserIdFromToken($token);
+                if ($user_id) {
+                    $conn = connect();
+                    $sql = "SELECT username, password FROM users WHERE id = ?";
+                    $stmt = mysqli_prepare($conn, $sql);
+                    mysqli_stmt_bind_param($stmt, 'i', $user_id);
+                    mysqli_stmt_execute($stmt);
+                    mysqli_stmt_bind_result($stmt, $username, $password);
+                    mysqli_stmt_fetch($stmt);
+                    mysqli_stmt_close($stmt);
+                    mysqli_close($conn);
+                    ?>
+                    const usernameInput = document.getElementById("inputUserName");
+                    const passwordInput = document.getElementById("inputPassword4");
+
+                    usernameInput.value = "<?php echo $username; ?>";
+                    passwordInput.value = "<?php echo $password; ?>";
+                    <?php
+                }
+            }
+            ?>
+        });
+    </script>
 </body>
 
 </html>

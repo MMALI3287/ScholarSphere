@@ -1,15 +1,12 @@
 {
     "name": "scholar_sphere/0.1",
     "description": "A groundbreaking hub for tertiary education collaboration",
-
     "require": {
         "php": ">=8.1.2",
         "sendgrid/sendgrid": "^8.0",
         "vlucas/phpdotenv": "^5.5"
     },
-
     "license": "MIT",
-
     "authors": [
         {
             "name": "Musaddique Ali Erfan",
