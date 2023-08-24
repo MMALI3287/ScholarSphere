@@ -38,6 +38,7 @@ require 'connect.php'; ?>
 
         if ($postResult && mysqli_num_rows($postResult) > 0) {
             $post = mysqli_fetch_assoc($postResult);
+            $contentWithLineBreaks = nl2br($post['content']);
 
             // Calculate time elapsed
             $timeElapsed = calculateTimeElapsed($post['time_elapsed']); // You need to implement the calculateTimeElapsed function
@@ -46,7 +47,7 @@ require 'connect.php'; ?>
             echo '<h4>Posted by: ' . $post['username'] . ' ' . $timeElapsed . ' ago' . '</h4>';
             echo '<h4>Posted on: ' . $post['created_at'] . '</h4>';
 
-            echo '<br><h3>' . $post['content'] . '</h3><br><hr>';
+            echo '<br><h3>' . $contentWithLineBreaks . '</h3><br><hr>';
         }
         ?>
 

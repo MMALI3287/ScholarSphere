@@ -5,11 +5,11 @@ if (!isset($_SESSION['id'])) {
 }
 $conn = connect();
 
-$query = "SELECT * FROM admins WHERE verified = 0";
+$query = "SELECT * FROM admins WHERE verified = 0 ORDER BY user_id DESC";
 $result1 = mysqli_query($conn, $query);
-$query = "SELECT * FROM admission_candidates WHERE verified = 0";
+$query = "SELECT * FROM admission_candidates WHERE verified = 0 ORDER BY user_id DESC";
 $result2 = mysqli_query($conn, $query);
-$query = "SELECT * FROM alumni_current_students WHERE verified = 0";
+$query = "SELECT * FROM alumni_current_students WHERE verified = 0 ORDER BY user_id DESC";
 $result3 = mysqli_query($conn, $query);
 
 // Process verification requests

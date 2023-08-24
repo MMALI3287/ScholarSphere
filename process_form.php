@@ -1,4 +1,3 @@
-
 <?php
 require 'connect.php'; // Include your database connection file
 

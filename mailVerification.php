@@ -187,7 +187,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && !isset($_SESSION['auth_code'])) {
         $curlOptions = [
             CURLOPT_HTTPHEADER => $headers,
             CURLOPT_SSL_VERIFYPEER => true,
-            CURLOPT_CAINFO => 'C:\Certificates\cacert-2023-05-30.pem', // Replace with the actual path
+            CURLOPT_CAINFO => 'Certificates/cacert-2023-05-30.pem', // Replace with the actual path
         ];
 
         $sendgrid = new \SendGrid($apiKey);

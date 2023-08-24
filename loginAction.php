@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $row = mysqli_fetch_assoc($result);
             $_SESSION['username'] = $row['username'];
             $_SESSION['id'] = $row['id'];
+            $_SESSION['type'] = $row['type'];
             if (isset($_POST['rememberMe'])) {
                 $token = generateRememberMeToken();
                 storeTokenInDatabase($row['id'], $token);

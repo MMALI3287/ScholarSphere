@@ -1,4 +1,13 @@
 <?php
+if (!isset($_SESSION['id'])) {
+    session_start();
+}
+
+// Check if user is logged in
+if (!isset($_SESSION['id'])) {
+    header("Location: login.php");
+    exit();
+}
 
 require 'connect.php';
 
@@ -30,55 +39,58 @@ require 'connect.php';
                 </div>
                 <div class="row mt-4">
                     <?php
-                    // if (!isset($_SESSION['type'])) {
-                    //     session_start();
-                    // }
-                    // $conn = connect();
-                    // $id = $_SESSION['id'];
-                    // $type = $_SESSION['type'];
-                    // $query = "SELECT verified FROM $type WHERE user_id=$id";
-                    // $result = mysqli_query($conn, $query);
-                    // $row = mysqli_fetch_assoc($result);
-                    // if ($row > 0) {
-                    //     $verified = $row['verified'];
-                    // } else {
-                    //     $verified = 0;
-                    // }
-                    // if ($type === 'admins' && $verified) {
-                    echo '<div class="row mt-4">';
-                    echo '<div class="col-md-6">';
-                    echo '<div class="feature-card">';
-                    echo '<a href="inputAdmissionData.php" style="text-decoration:none;">'; // Link to the admission input page
-                    echo '<div class="feature-icon">';
-                    echo '<i class="fas fa-pencil-alt"></i>'; // Use a pencil icon (or any other suitable icon)
-                    echo '</div>';
-                    echo '<h2>Input to Admission Portal</h2>';
-                    echo '</a>';
-                    echo '<h3>Contribute to the Admission Portal with your valuable insights.</h3>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '<div class="col-md-6">';
-                    echo '<img src="assets/images/AdmissionInput.jpg" alt="Admission Portal Input">';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '
-                        <div class="col-md-6">
+                    if (!isset($_SESSION['type'])) {
+                        session_start();
+                    }
+                    $conn = connect();
+                    $id = $_SESSION['id'];
+                    $type = $_SESSION['type'];
+                    if ($id === '') {
+                        header("Location: login.php");
+                    }
+                    $query = "SELECT verified FROM $type WHERE user_id=$id";
+                    $result = mysqli_query($conn, $query);
+                    $row = mysqli_fetch_assoc($result);
+                    if ($row > 0) {
+                        $verified = $row['verified'];
+                    } else {
+                        $verified = 0;
+                    }
+                    if ($type === 'admins' && $verified) {
+                        echo '<div class="row mt-4">';
+                        echo '<div class="col-md-6">';
+                        echo '<div class="feature-card">';
+                        echo '<a href="inputAdmissionData.php" style="text-decoration:none;">'; // Link to the admission input page
+                        echo '<div class="feature-icon">';
+                        echo '<i class="fas fa-pencil-alt"></i>'; // Use a pencil icon (or any other suitable icon)
+                        echo '</div>';
+                        echo '<h2>Input to Admission Portal</h2>';
+                        echo '</a>';
+                        echo '<h3>Contribute to the Admission Portal with your valuable insights.</h3>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<div class="col-md-6">';
+                        echo '<img src="assets/images/AdmissionInput.jpg" alt="Admission Portal Input">';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '
+                        <div class="col-md-6 mt-4">
                         <img src="assets/images/Trust2.jpg" alt="Image 1">
                                 </div>
                            ';
-                    echo '<div class="col-md-6">';
-                    echo '<div class="feature-card">';
-                    echo '<a href="profileVerification.php" style="text-decoration:none;">';
-                    echo '<div class="feature-icon">';
-                    echo '<i class="fas fa-check-circle"></i>';
-                    echo '</div>';
-                    echo '<h2>Trusted Profile Validation</h2>';
-                    echo '</a>';
-                    echo '<h3>Validate and approve trusted profiles for authenticity.</h3>';
-                    echo '</div>
+                        echo '<div class="col-md-6 mt-4">';
+                        echo '<div class="feature-card">';
+                        echo '<a href="profileVerification.php" style="text-decoration:none;">';
+                        echo '<div class="feature-icon">';
+                        echo '<i class="fas fa-check-circle"></i>';
+                        echo '</div>';
+                        echo '<h2>Trusted Profile Validation</h2>';
+                        echo '</a>';
+                        echo '<h3>Validate and approve trusted profiles for authenticity.</h3>';
+                        echo '</div>
                         </div>';
 
-                    // }
+                    }
                     ?>
                 </div>
 
