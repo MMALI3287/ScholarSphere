@@ -16,7 +16,6 @@ use SendGrid\Mail\Mail;
 
 $email = new Mail();
 
-// Replace the email address and name with your verified sender
 $email->setFrom(
     'erfanali3287@gmail.com',
     'Musaddique Ali'
@@ -24,7 +23,6 @@ $email->setFrom(
 
 $email->setSubject('Testing sending files with Attachments');
 
-// Replace the email address and name with your recipient
 $email->addTo(
     'mahtab.sani12381@gmail.com',
     'Fakibaj'
@@ -85,7 +83,7 @@ $email->setGanalytics(
 $curlOptions = [
     CURLOPT_HTTPHEADER => $headers,
     CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_CAINFO => 'C:\Certificates\cacert-2023-05-30.pem', // Replace with the actual path
+    CURLOPT_CAINFO => 'C:\Certificates\cacert-2023-05-30.pem', 
 ];
 
 $sendgrid = new \SendGrid($apiKey);

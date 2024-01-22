@@ -13,7 +13,7 @@
 
 <body>
     <?php
-    include 'partials/_header.php'; // Include your header
+    include 'partials/_header.php'; 
     $query = "SELECT * FROM forum_posts ORDER BY post_id DESC";
 
     $conn = connect();
@@ -29,7 +29,7 @@
         <h1 class="text-center">All Forum Posts</h1>
         <div class="row">
             <?php
-            // Display posts
+            
             while ($row = mysqli_fetch_assoc($result)) {
                 $contentPreview = substr($row['content'], 0, 170);
                 echo '<div class="col-md-6">

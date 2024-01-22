@@ -90,6 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && !isset($_SESSION['auth_code'])) {
 
     if ($errors == 0) {
         $auth_code = mt_rand(10000000, 99999999);
+        echo 'console.log(' . json_encode($_SESSION) . ');';
         $_SESSION['auth_code'] = $auth_code;
         $_SESSION['username'] = $username;
         $_SESSION['email'] = $email;

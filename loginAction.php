@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             if (isset($_POST['rememberMe'])) {
                 $token = generateRememberMeToken();
                 storeTokenInDatabase($row['id'], $token);
-                setcookie('remember_me', $token, time() + (86400 * 30), '/'); // Set cookie for 30 days
+                setcookie('remember_me', $token, time() + (86400 * 30), '/'); 
             }
             header("Location: profile.php");
         } else {
@@ -86,8 +86,6 @@ function loginUser($user_id)
 
 function getUserIdFromToken($token)
 {
-    // Implement your database query to retrieve the user ID
-    // Example using MySQLi:
     $conn = connect(); // Implement your database connection function
     $sql = "SELECT id FROM remember_me_tokens WHERE token = ?";
     $stmt = mysqli_prepare($conn, $sql);

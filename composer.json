@@ -4,7 +4,8 @@
     "require": {
         "php": ">=8.1.2",
         "sendgrid/sendgrid": "^8.0",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "ipinfo/ipinfo": "^3.1"
     },
     "license": "MIT",
     "authors": [

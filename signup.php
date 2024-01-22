@@ -119,7 +119,7 @@ $errors = 0;
             $_SESSION['auth_code'] = $auth_code;
 
             $email = new Mail();
-            // Replace the email address and name with your verified sender
+            
             $email->setFrom(
                 'erfanali3287@gmail.com',
                 'ScholarSphere Authentication'
@@ -179,7 +179,7 @@ $errors = 0;
                 $emailContent
             );
 
-            $current_time = time(); // Get the current Unix timestamp
+            $current_time = time();
             $email->setSendAt($current_time);
 
             $email->setReplyTo("erfanali3287@gmail.com", "Get Help");
@@ -211,7 +211,7 @@ $errors = 0;
             $curlOptions = [
                 CURLOPT_HTTPHEADER => $headers,
                 CURLOPT_SSL_VERIFYPEER => true,
-                CURLOPT_CAINFO => 'C:\Certificates\cacert-2023-05-30.pem', // Replace with the actual path
+                CURLOPT_CAINFO => 'C:\Certificates\cacert-2023-05-30.pem', 
             ];
 
             $sendgrid = new \SendGrid($apiKey);
@@ -334,6 +334,7 @@ $errors = 0;
 
     <?php
     if (isset($_SESSION['auth_code']) and !empty($_SESSION['auth_code'])) {
+        echo($_SESSION['auth_code']);
         echo '
         <div class="popup-container" id="popupContainer">
             <div class="popup-content">

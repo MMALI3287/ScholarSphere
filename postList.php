@@ -13,21 +13,20 @@
 
 <body>
     <?php
-    include 'partials/_header.php'; // Include your header
+    include 'partials/_header.php'; 
     
-    // Get the selected category or subcategory ID from the URL or form submission
-    $selectedCategory = $_GET['category_id']; // Adjust this based on how you pass the ID
+    $selectedCategory = $_GET['category_id'];
     
-    // Fetch the selected category or subcategory name for display
-    $selectedSubcategory = $_GET['subcategory_id']; // Adjust this based on how you pass the name
     
-    $selectedCategoryName = $_GET['category_name']; // Adjust this based on how you pass the ID
+    $selectedSubcategory = $_GET['subcategory_id']; 
     
-    // Query to retrieve posts based on the selected category or subcategory ID
+    $selectedCategoryName = $_GET['category_name']; 
+    
+    
     $query = "SELECT * FROM forum_posts WHERE category_id = '$selectedCategory' AND subcategory_id = '$selectedSubcategory' ORDER BY post_id DESC";
 
-    // Execute the query and fetch the posts
-    $conn = connect(); // Assuming you have a connect function
+    
+    $conn = connect(); 
     $result = mysqli_query($conn, $query);
     ?>
 
@@ -37,7 +36,7 @@
         </h2>
         <div class="row">
             <?php
-            // Display posts
+            
             while ($row = mysqli_fetch_assoc($result)) {
                 $contentPreview = substr($row['content'], 0, 170);
                 echo '<div class="col-md-6">

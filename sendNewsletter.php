@@ -6,7 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 require 'vendor/autoload.php';
 require 'connect.php';
 
-require 'fpdf/fpdf.php'; // Include the FPDF library
+require 'fpdf/fpdf.php'; 
 
 require 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -52,7 +52,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 $lastWeekStart = date('Y-m-d', strtotime('-1 week'));
-$lastWeekEnd = date('Y-m-d', strtotime('+1 day')); // Add one day to the current date
+$lastWeekEnd = date('Y-m-d', strtotime('+1 day')); 
 $sqlForum = "SELECT forum_posts.*, users.username
             FROM forum_posts 
             JOIN users ON forum_posts.id = users.id
@@ -72,7 +72,7 @@ while ($rowForum = mysqli_fetch_assoc($resultForum)) {
     $pdf->Cell(0, 10, 'Post Date: ' . $rowForum['created_at'], 0, 1);
     $pdf->SetFont('Arial', '', 10);
     $pdf->MultiCell(0, 10, 'Content: ' . $rowForum['content'], 0, 'L');
-    // Add more details as needed
+    
 }
 
 $pdfFilePath = 'assets/newsletters/Newsletter ' . $date . '.pdf';
@@ -110,7 +110,7 @@ $email->addContent(
     </html>'
 );
 
-$current_time = time(); // Get the current Unix timestamp
+$current_time = time(); 
 $email->setSendAt($current_time);
 
 $file_encoded = base64_encode(file_get_contents($pdfFilePath));
@@ -151,7 +151,7 @@ $email->setGanalytics(
 $curlOptions = [
     CURLOPT_HTTPHEADER => $headers,
     CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_CAINFO => 'C:\Certificates\cacert-2023-05-30.pem', // Replace with the actual path
+    CURLOPT_CAINFO => 'C:\Certificates\cacert-2023-05-30.pem', 
 ];
 
 $sendgrid = new \SendGrid($apiKey);
