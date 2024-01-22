@@ -12,7 +12,7 @@ $result2 = mysqli_query($conn, $query);
 $query = "SELECT * FROM alumni_current_students WHERE verified = 0 ORDER BY user_id DESC";
 $result3 = mysqli_query($conn, $query);
 
-// Process verification requests
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['verify'])) {
     $userId = $_POST['user_id'];
     $query = "SELECT type FROM users WHERE id= $userId";

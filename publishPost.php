@@ -1,13 +1,13 @@
 <?php
-require 'connect.php'; // Include your database connection
+require 'connect.php'; 
 
-// Fetch categories and subcategories for dropdown menus
+
 $conn = connect();
 
 $categoryQuery = "SELECT * FROM categories";
 $categoryResult = mysqli_query($conn, $categoryQuery);
 
-$selectedCategoryId = 1; // Default to category ID 1
+$selectedCategoryId = 1; 
 
 if (isset($_GET['selected_category'])) {
     $selectedCategoryId = $_GET['selected_category'];

@@ -3,15 +3,15 @@ if (!isset($_SESSION['id'])) {
     session_start();
 }
 
-// Check if user is logged in
+
 if (!isset($_SESSION['id'])) {
     header("Location: login.php");
     exit();
 }
 
-require 'connect.php'; // Include your database connection code here
+require 'connect.php'; 
 
-// Get user's account type
+
 $id = $_SESSION['id'];
 $query = "SELECT type FROM users WHERE id= $id";
 $conn = connect();
@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
 $type = $row['type'];
 
-// Get user's profile data based on account type
+
 $query = "SELECT * FROM $type WHERE user_id = $id";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
@@ -78,13 +78,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_query($conn, $insert_query);
     }
 
-    // Update the fields based on account type
+    
     $update_query = "UPDATE $type SET ";
     switch ($type) {
         case 'admins':
             $update_query .= "first_name = '{$_POST['first_name']}', last_name = '{$_POST['last_name']}', ";
-            $update_query .= "phone_number = '{$_POST['phone_number']}', address = '{$_POST['address']}', ";
-            $update_query .= "date_of_birth = '{$_POST['date_of_birth']}' ";
+            $update_query .= "phone_number = '{$_POST['phone_number']}', address = '{$_POST['address']}'";
+            // $update_query .= "date_of_birth = '{$_POST['date_of_birth']}' ";
             break;
         case 'admission_candidates':
             $update_query .= "first_name = '{$_POST['first_name']}', last_name = '{$_POST['last_name']}', ";
@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $update_query .= ", profile_picture = '$profile_picture_path'";
     }
 
-    // Handle ID card upload for alumni/current students
+    
     if ($type === 'alumni_current_students' && $_FILES['id_card']['error'] === UPLOAD_ERR_OK) {
         $id_card_path = 'assets/images/idcards/' . $_FILES['id_card']['name'];
         move_uploaded_file($_FILES['id_card']['tmp_name'], $id_card_path);
@@ -120,25 +120,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-    // Debugging: Print the uploaded files information
+    
     var_dump($_FILES);
 
-    // Debugging: Print the update query
+    
     echo $update_query;
 
 
 
 
-    // Execute the update query
+    
     mysqli_query($conn, $update_query);
 
-    // Check for MySQL errors
+    
     if (mysqli_error($conn)) {
         echo "MySQL Error: " . mysqli_error($conn);
     }
 
 
-    // Redirect to the same page to show updated information
+    
     header("Location: profile.php");
 }
 ?>
@@ -227,7 +227,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         editAllButton.addEventListener('click', () => {
             const inputFields = document.querySelectorAll('.form-control');
-            const spanFields = document.querySelectorAll('.form-group span'); // Select all <span> elements
+            const spanFields = document.querySelectorAll('.form-group span'); 
 
 
             inputFields.forEach(field => {
@@ -235,11 +235,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             });
 
             spanFields.forEach(span => {
-                span.classList.add('d-none'); // Hide the <span> elements
+                span.classList.add('d-none'); 
             });
 
             fileInputs.forEach(fileInput => {
-                fileInput.classList.remove('d-none'); // Show the file input
+                fileInput.classList.remove('d-none'); 
             });
 
 
