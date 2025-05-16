@@ -5,7 +5,7 @@ declare(strict_types=1);
 if (!isset($_SESSION['id'])) {
     session_start();
 }
-require 'connect.php';
+require '../connect.php';
 
 $conn = connect();
 
@@ -32,10 +32,9 @@ if (mysqli_query($conn, $sql)) {
     $_SESSION['password_error_message'] = "";
     $_SESSION['registration_successful'] = "";
     $_SESSION['username'] = '';
-    $_SESSION['email'] = '';
-    header("Location: login.php");
+    $_SESSION['email'] = '';    header("Location: ../pages/login.php");
 } else {
     // Handle database insertion error
     $_SESSION['registration_error_message'] = "An error occurred during registration. Please try again.";
-    header("Location: signup.php");
+    header("Location: ../pages/signup.php");
 }

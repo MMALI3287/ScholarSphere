@@ -5,11 +5,11 @@ if (!isset($_SESSION['id'])) {
 
 
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: ../pages/login.php");
     exit();
 }
 
-require 'connect.php'; 
+require '../connect.php'; 
 
 
 $id = $_SESSION['id'];
@@ -148,14 +148,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/profilestyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>My Profile</title>
+    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/profilestyle.css">
 </head>
 
 <body>
-    <?php include 'partials/_header.php'; ?>
+    <?php include '../partials/_header.php'; ?>
     <div class="container mt-5">
         <button type="button" class="btn btn-link edit-all-button mb-2">Edit All</button>
         <h1 class="text-center mt-5 pt-5">My Profile</h1>
@@ -216,9 +215,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="mt-4 container mb-5">
         <a href="login.php"><button type="button" class="buton">Sign Out</button></a>
     </div>
-    <?php
-    include 'partials/_footer.php';
-    include 'partials/_bootstrapjs.php';
+    <?php    include '../partials/_footer.php';
+    include '../partials/_bootstrapjs.php';
     ?>
     <script>
         const saveButton = document.getElementById('save-button');

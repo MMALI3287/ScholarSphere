@@ -1,5 +1,5 @@
 <?php
-require 'MapsDB.php';
+require './MapsDB.php';
 ?>
 
 <!DOCTYPE html>

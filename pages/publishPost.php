@@ -1,5 +1,5 @@
 <?php
-require 'connect.php'; 
+require '../connect.php'; 
 
 
 $conn = connect();
@@ -28,17 +28,17 @@ if (!isset($_SESSION['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Post</title>
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/forum.css">
+    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/forum.css">
 </head>
 
 <body>
-    <?php include 'partials/_header.php';
+    <?php include '../partials/_header.php';
     ?>
 
     <div class="container post">
         <h2 class="text-center pb-5">Create New Post</h2>
-        <form action="createPost.php" method="post">
+        <form action="./createPost.php" method="post">
             <div class="form-group">
                 <label for="category">Category</label>
                 <select class="form-control" id="category" name="category" onchange="redirectWithCategory()">
@@ -69,9 +69,8 @@ if (!isset($_SESSION['id'])) {
         </form>
     </div>
 
-    <?php
-    include 'partials/_footer.php';
-    include 'partials/_bootstrapjs.php';
+    <?php    include '../partials/_footer.php';
+    include '../partials/_bootstrapjs.php';
     ?>
     <script>
         function redirectWithCategory() {

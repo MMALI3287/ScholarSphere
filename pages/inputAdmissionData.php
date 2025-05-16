@@ -3,17 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Admission Form</title>
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/inputAdmissionData.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>University Admission Form</title>
+    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/inputAdmissionData.css">
 </head>
 
 <body class="bg-secondary">
-    <?php include 'partials/_header.php'; ?>
+    <?php include '../partials/_header.php'; ?>
     <div class="container mt-5 pt-5">
         <h1 class="text-center">University Admission Form</h1>
-        <form action="process_form.php" method="post" enctype="multipart/form-data" novalidate>
+        <form action="../pages/process_form.php" method="post" enctype="multipart/form-data" novalidate>
             <div class="form-group">
                 <label for="varsity_name">University Name</label>
                 <input type="text" class="form-control" id="varsity_name" name="varsity_name" required>
@@ -74,9 +73,8 @@
         </form>
     </div>
 
-    <?php
-    include 'partials/_footer.php';
-    include 'partials/_bootstrapjs.php';
+    <?php    include '../partials/_footer.php';
+    include '../partials/_bootstrapjs.php';
     ?>
 </body>
 

@@ -1,4 +1,4 @@
-<?php require 'connect.php' ?>
+<?php require '../connect.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,13 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum</title>
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/forum.css">
+    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/forum.css">
 </head>
 
 <body>
     <?php
-    include 'partials/_header.php';
+    include '../partials/_header.php';
     ?>
     <div id="carouselExampleIndicators" class="carousel slide mt-5 pt-4" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -23,13 +23,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/images/slide1.jpg" class="d-block w-100" alt="First slide" height="900" />
+                <img src="../assets/images/slide1.jpg" class="d-block w-100" alt="First slide" height="900" />
             </div>
             <div class="carousel-item">
-                <img src="assets/images/slide2.jpg" class="d-block w-100" alt="Second slide" height="900" />
+                <img src="../assets/images/slide2.jpg" class="d-block w-100" alt="Second slide" height="900" />
             </div>
             <div class="carousel-item">
-                <img src="assets/images/slide3.jpg" class="d-block w-100" alt="Third slide" height="900" />
+                <img src="../assets/images/slide3.jpg" class="d-block w-100" alt="Third slide" height="900" />
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -92,7 +92,7 @@
                     echo '<h5 class="card-title">' . $category['name'] . '</h5>';
                     echo '<ul class="list-unstyled">';
                     foreach ($category['subcategories'] as $subcategory) {
-                        echo '<li><a href="postList.php?category_id=' . $category['id'] . '&subcategory_id=' . $subcategory['id'] . '&category_name=' . $category['name'] . '" class="text-decoration-none">' . $subcategory['name'] . '</a></li>';
+                        echo '<li><a href="../pages/postList.php?category_id=' . $category['id'] . '&subcategory_id=' . $subcategory['id'] . '&category_name=' . $category['name'] . '" class="text-decoration-none">' . $subcategory['name'] . '</a></li>';
                     }
                     echo '</ul></div></div></div>';
                 }
@@ -121,7 +121,7 @@
 
 
     <?php
-    include 'partials/_footer.php';
+    include '../partials/_footer.php';
 
     ?>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

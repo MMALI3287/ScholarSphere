@@ -1,9 +1,9 @@
 <?php
 
 declare(strict_types=1);
-require 'connect.php';
-require __DIR__ . '/vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+require '../connect.php';
+require __DIR__ . '/../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 $apiKey = $_ENV['SENDGRID_API_KEY'];
@@ -27,16 +27,15 @@ $errors = 0;
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/loginstyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/loginstyle.css" />
     <title>Login</title>
 </head>
 
 <body>
-    <?php include 'partials/_header.php'; ?>
+    <?php include '../partials/_header.php'; ?>
     <video autoplay loop muted plays-inline preload="auto" class="back-video">
-        <source src="assets/videos/rain.mp4" type="video/mp4">
+        <source src="../assets/videos/rain.mp4" type="video/mp4">
     </video>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === "POST") {
@@ -353,9 +352,9 @@ $errors = 0;
             </div>
         </div>';
     }
-    include 'partials/_bootstrapjs.php';
+    include '../partials/_bootstrapjs.php';
     ?>
-    <script src="js/signUp.js"></script>
+    <script src="../js/signUp.js"></script>
 
 </body>
 

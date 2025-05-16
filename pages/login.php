@@ -1,5 +1,5 @@
 <?php
-require 'loginAction.php';
+require './loginAction.php';
 
 $_SESSION['id'] = '';
 $_SESSION['username'] = '';
@@ -12,13 +12,13 @@ $_SESSION['type'] = '';
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/loginstyle.css" />
+    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/loginstyle.css" />
     <title>Login</title>
 </head>
 
 <body>
-    <?php include 'partials/_header.php'; ?>
+    <?php include '../partials/_header.php';?>
     <video autoplay loop muted plays-inline preload="auto" class="back-video">
         <source src="assets/videos/rain.mp4" type="video/mp4">
     </video>
@@ -30,7 +30,7 @@ $_SESSION['type'] = '';
                     <h2 class="text-center h1 w-100 pt-5">Sign In Now</h2>
                 </div>
                 <div class="col-md-12 login-form">
-                    <form class="row" action="loginAction.php" method="POST" novalidate>
+                    <form class="row" action="./loginAction.php" method="POST" novalidate>
                         <?php
                         if (isset($_SESSION['login_error_message']) and !empty($_SESSION['login_error_message'])) {
                             echo '<div class="alert alert-danger d-flex align-items-center" role="alert">
@@ -85,9 +85,9 @@ $_SESSION['type'] = '';
         </div>
     </div>
     <?php
-    include 'partials/_bootstrapjs.php';
+    include '../partials/_bootstrapjs.php';
     ?>
-    <script src="js/index.js"></script>
+    <script src="../js/index.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             <?php

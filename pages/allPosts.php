@@ -1,4 +1,4 @@
-<?php require 'connect.php' ?>
+<?php require '../connect.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,33 +7,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum</title>
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/forum.css">
+    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/forum.css">
 </head>
 
 <body>
     <?php
-    include 'partials/_header.php'; 
-    
-    $selectedCategory = $_GET['category_id'];
-    
-    
-    $selectedSubcategory = $_GET['subcategory_id']; 
-    
-    $selectedCategoryName = $_GET['category_name']; 
-    
-    
-    $query = "SELECT * FROM forum_posts WHERE category_id = '$selectedCategory' AND subcategory_id = '$selectedSubcategory' ORDER BY post_id DESC";
+    include '../partials/_header.php';
+    $query = "SELECT * FROM forum_posts ORDER BY post_id DESC";
 
-    
-    $conn = connect(); 
+    $conn = connect();
     $result = mysqli_query($conn, $query);
     ?>
+    <div>
+        <button class="btn btn-link">
+            <a href="Forum.php" class="text-white" style="text-decoration:none;">Select Category</a>
+        </button>
+    </div>
 
     <div class="container mt-5 pt-5">
-        <h2 class="text-center">Posts under
-            <?php echo $selectedCategoryName; ?>
-        </h2>
+        <h1 class="text-center">All Forum Posts</h1>
         <div class="row">
             <?php
             
@@ -49,10 +42,8 @@
             ?>
         </div>
     </div>
-
-    <?php
-    include 'partials/_footer.php';
-    include 'partials/_bootstrapjs.php';
+    <?php    include '../partials/_footer.php';
+    include '../partials/_bootstrapjs.php';
     ?>
 
 </body>

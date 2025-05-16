@@ -1,5 +1,5 @@
 <?php
-require 'connect.php'; 
+require '../connect.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $varsity_name = $_POST['varsity_name'];
@@ -13,8 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $additional_information = $_POST['additional_information'];
     $notice_url = $_POST['notice_url'];
 
-    
-    $image_path = 'assets/images/' . $_FILES['image']['name'];
+      $image_path = '../assets/images/' . $_FILES['image']['name'];
     move_uploaded_file($_FILES['image']['tmp_name'], $image_path);
 
     

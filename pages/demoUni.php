@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harvard University Profile</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/demoUni.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Harvard University Profile</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/demoUni.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -59,7 +58,7 @@
                 <h1>Harvard University</h1>
                 <p>Prestigious Ivy League institution located in Cambridge, Massachusetts</p>
             </div>
-            <div class="col-md-2"><img src="assets/images/harvard.webp" alt="harvard"></div>
+            <div class="col-md-2"><img src="../assets/images/harvard.webp" alt="harvard"></div>
         </div>
     </div>
     <div class="container-fluid">
@@ -261,10 +260,10 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="../js/bootstrap.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTR26_-VtI2fhWyKGnoYv_uKNJnl4p_2w&callback=initMap"
         async defer></script>
-    <script src="js/demoUni.js"></script>
+    <script src="../js/demoUni.js"></script>
 </body>
 
 </html>

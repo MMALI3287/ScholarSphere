@@ -1,5 +1,5 @@
 <?php
-require 'connect.php'; 
+require '../connect.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $postId = $_POST['post_id']; 
@@ -9,11 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conn = connect(); 
 
     $insertQuery = "INSERT INTO comments (post_id, id, comment_text, comment_date) 
-                    VALUES ('$postId', '$userId', '$comment', NOW())";
-
-    if (mysqli_query($conn, $insertQuery)) {
+                    VALUES ('$postId', '$userId', '$comment', NOW())";    if (mysqli_query($conn, $insertQuery)) {
        
-        header("Location: postDetail.php?post_id=$postId");
+        header("Location: ../pages/postDetail.php?post_id=$postId");
         exit();
     } else {
         

@@ -4,12 +4,11 @@ if (!isset($_SESSION['id'])) {
 }
 
 // Check if user is logged in
-if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+if (!isset($_SESSION['id'])) {    header("Location: ../pages/login.php");
     exit();
 }
 
-require 'connect.php';
+require '../connect.php';
 
 ?>
 
@@ -20,13 +19,12 @@ require 'connect.php';
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to ScholarSphere</title>
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/welcome.css">
+    <title>Welcome to ScholarSphere</title>    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/welcome.css">
 </head>
 
 <body>
-    <?php include 'partials/_header.php'; ?>
+    <?php include '../partials/_header.php'; ?>
     <div class="container mt-5 mb-5">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -70,12 +68,12 @@ require 'connect.php';
                         echo '</div>';
                         echo '</div>';
                         echo '<div class="col-md-6">';
-                        echo '<img src="assets/images/AdmissionInput.jpg" alt="Admission Portal Input">';
+                        echo '<img src="../assets/images/AdmissionInput.jpg" alt="Admission Portal Input">';
                         echo '</div>';
                         echo '</div>';
                         echo '
                         <div class="col-md-6 mt-4">
-                        <img src="assets/images/Trust2.jpg" alt="Image 1">
+                        <img src="../assets/images/Trust2.jpg" alt="Image 1">
                                 </div>
                            ';
                         echo '<div class="col-md-6 mt-4">';
@@ -108,7 +106,7 @@ require 'connect.php';
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="assets/images/img1.png" alt="Image 1">
+                        <img src="../assets/images/img1.png" alt="Image 1">
                     </div>
                 </div>
 
@@ -125,7 +123,7 @@ require 'connect.php';
                         </div>
                     </div>
                     <div class="col-md-6 order-md-1">
-                        <img src="assets/images/img2.jpg" alt="Image 2">
+                        <img src="../assets/images/img2.jpg" alt="Image 2">
                     </div>
                 </div>
 
@@ -142,16 +140,15 @@ require 'connect.php';
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="assets/images/img3.jpg" alt="Image 3">
+                        <img src="../assets/images/img3.jpg" alt="Image 3">
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-    <?php
-    include 'partials/_footer.php';
-    include 'partials/_bootstrapjs.php';
+    <?php    include '../partials/_footer.php';
+    include '../partials/_bootstrapjs.php';
     ?>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>

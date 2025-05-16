@@ -1,5 +1,5 @@
 <?php
-include 'MapsDB.php';
+include './MapsDB.php';
 ?>
 
 <!DOCTYPE html>

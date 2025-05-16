@@ -1,12 +1,15 @@
 # ScholarSphere
 
-[![wakatime](https://wakatime.com/badge/user/55b3480f-fbb9-40ba-bd9a-c04c257f4e39/project/64e24da4-786f-4600-ac01-906acdc158e6.svg)](https://wakatime.com/badge/user/55b3480f-fbb9-40ba-bd9a-c04c257f4e39/project/64e24da4-786f-4600-ac01-906acdc158e6)
-
 ## Your One-Stop Solution for University Admissions
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.0%2B-blue.svg)](https://www.php.net)
-[![Bootstrap Version](https://img.shields.io/badge/Bootstrap-5.0-purple.svg)](https://getbootstrap.com)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.0-purple.svg)](https://getbootstrap.com)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-orange.svg)](https://www.mysql.com)
+[![jQuery](https://img.shields.io/badge/jQuery-3.6-blue.svg)](https://jquery.com)
+[![SendGrid](https://img.shields.io/badge/SendGrid-Integrated-green.svg)](https://sendgrid.com)
+[![Composer](https://img.shields.io/badge/Composer-2.0-yellow.svg)](https://getcomposer.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![wakatime](https://wakatime.com/badge/user/55b3480f-fbb9-40ba-bd9a-c04c257f4e39/project/64e24da4-786f-4600-ac01-906acdc158e6.svg)](https://wakatime.com/badge/user/55b3480f-fbb9-40ba-bd9a-c04c257f4e39/project/64e24da4-786f-4600-ac01-906acdc158e6)
 
 ## 🎯 Project Overview
 

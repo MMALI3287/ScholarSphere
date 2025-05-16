@@ -2,7 +2,7 @@
 if (!isset($_SESSION['id'])) {
     session_start();
 }
-require 'connect.php';
+require '../connect.php';
 $username = $password = "";
 
 $conn = "";
@@ -43,15 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 $token = generateRememberMeToken();
                 storeTokenInDatabase($row['id'], $token);
                 setcookie('remember_me', $token, time() + (86400 * 30), '/'); 
-            }
-            header("Location: profile.php");
+            }            header("Location: ../pages/profile.php");
         } else {
             $_SESSION['login_error_message'] = "Invalid username or password";
-            header("Location: login.php");
+            header("Location: ../pages/login.php");
         }
     }
     if ($errors > 0) {
-        header("Location: login.php");
+        header("Location: ../pages/login.php");
     }
 }
 
@@ -81,7 +80,7 @@ function loginUser($user_id)
     $_SESSION['username'] = $row['username'];
     $_SESSION['id'] = $row['id'];
     $_SESSION['type'] = $row['type'];
-    header("Location: profile.php");
+    header("Location: ../pages/profile.php");
 }
 
 function getUserIdFromToken($token)

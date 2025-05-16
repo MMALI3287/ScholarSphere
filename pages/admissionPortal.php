@@ -1,5 +1,5 @@
 <?php
-require 'connect.php';
+require '../connect.php';
 
 ?>
 
@@ -10,13 +10,13 @@ require 'connect.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Admission Portal</title>
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/admissionPortal.css">
+    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/admissionPortal.css">
 </head>
 
 <body>
     <?php
-    include 'partials/_header.php';
+    include '../partials/_header.php';
     ?>
     <div class="container mt-5 pt-5">
         <h1 class="text-center">University Admission Portal</h1>
@@ -63,9 +63,8 @@ require 'connect.php';
         </div>
     </div>
 
-    <?php
-    include 'partials/_footer.php';
-    include 'partials/_bootstrapjs.php';
+    <?php    include '../partials/_footer.php';
+    include '../partials/_bootstrapjs.php';
     ?>
 </body>
 

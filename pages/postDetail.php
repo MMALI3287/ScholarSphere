@@ -4,10 +4,10 @@ if (!isset($_SESSION['id'])) {
     session_start();
 }
 if (!isset($_SESSION['id'])) {
-    header("Location: login.php");
+    header("Location: ../pages/login.php");
 }
 
-require 'connect.php'; ?>
+require '../connect.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,13 +16,13 @@ require 'connect.php'; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum</title>
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/forum.css">
+    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/forum.css">
 </head>
 
 <body>
     <?php
-    include 'partials/_header.php';
+    include '../partials/_header.php';
     ?>
 
     <div class="container mt-5 pt-5">
@@ -106,7 +106,7 @@ require 'connect.php'; ?>
 
         <!-- Comment form -->
         <h3>Add a Comment</h3>
-        <form action="addComment.php" method="post">
+        <form action="./addComment.php" method="post">
             <input type="hidden" name="post_id" value="<?php echo $postId; ?>">
             <input type="hidden" name="user_id" value="<?php
             if (!isset($_SESSION['id'])) {
@@ -120,9 +120,8 @@ require 'connect.php'; ?>
         </form>
     </div>
 
-    <?php
-    include 'partials/_footer.php';
-    include 'partials/_bootstrapjs.php';
+    <?php    include '../partials/_footer.php';
+    include '../partials/_bootstrapjs.php';
     ?>
 </body>
 

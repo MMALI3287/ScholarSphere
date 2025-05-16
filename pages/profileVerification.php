@@ -1,5 +1,5 @@
 <?php
-require 'connect.php';
+require '../connect.php';
 if (!isset($_SESSION['id'])) {
     session_start();
 }
@@ -31,13 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['verify'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Verification</title>
-    <?php include 'partials/_bootstrapcss.php'; ?>
-    <link rel="stylesheet" href="css/forum.css">
+    <title>Admin Verification</title>    <?php include '../partials/_bootstrapcss.php'; ?>
+    <link rel="stylesheet" href="../css/forum.css">
 </head>
 
 <body>
-    <?php include 'partials/_header.php'; ?>
+    <?php include '../partials/_header.php'; ?>
     <div class="container mt-5 pt-5">
         <h1 class="text-white">Profile Verification</h1>
         <?php while ($row = mysqli_fetch_assoc($result3)): ?>
@@ -170,9 +169,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['verify'])) {
             </div>
         <?php endwhile; ?>
     </div>
-    <?php
-    include 'partials/_footer.php';
-    include 'partials/_bootstrapjs.php';
+    <?php    include '../partials/_footer.php';
+    include '../partials/_bootstrapjs.php';
     ?>
 </body>
 

@@ -1,4 +1,4 @@
-<?php require 'partials/_header.php'; ?>
+<?php require 'pages/partials/_header.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,16 +6,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="pages/css/bootstrap.css" />
+    <link rel="stylesheet" href="pages/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Landing Page</title>
 </head>
 
 <body>
 
-    <?php include 'partials/_header.php'; ?>
-    <div class="header" style=" background-image: url(assets/images/landing.png);
+    <?php include 'pages/partials/_header.php'; ?>
+    <div class="header" style=" background-image: url(pages/assets/images/landing.png);
     @media (max-width: 1550px) { 
     background-image: none !important;
     background-color: #03045e !important;}">
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="text" style=" background-image: url(assets/images/landing2.png);
+    <div class="text" style=" background-image: url(pages/assets/images/landing2.png);
     @media (max-width: 1550px) { 
     background-image: none !important;
     display: block !important;
@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    <div class="text" style="background-image: url(assets/images/landing3.png);
+    <div class="text" style="background-image: url(pages/assets/images/landing3.png);
     @media (max-width: 1550px) { 
     background-image: none !important;
     display: block !important;
@@ -82,7 +82,7 @@
         </div>
     </div>
 
-    <div class="text" style="background-image: url(assets/images/landing4.png);
+    <div class="text" style="background-image: url(pages/assets/images/landing4.png);
     @media (max-width: 1550px) { 
     background-image: none !important;
     display: block !important;
@@ -95,18 +95,17 @@
                     <p class="headerp4"> Join ScholarSphere today and be a part of </p>
                     <p class="headerp4">the future of higher education. Embrace knowledge,</p>
                     <p class="headerp4 pb-5"> collaboration, and innovation right here, right now!</p><br>
-                    <a href="signup.php"><button type="button" class="explorebtn">Explore ScholarSphere</button></a>
+                    <a href="pages/signup.php"><button type="button" class="explorebtn">Explore ScholarSphere</button></a>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="yellow"></div>
-    <?php
-    include 'partials/_footer.php';
-    include 'partials/_bootstrapjs.php';
+    <?php    include 'pages/partials/_footer.php';
+    include 'pages/partials/_bootstrapjs.php';
     ?>
-    <script src="js/index.js"></script>
+    <script src="pages/js/index.js"></script>
 </body>
 
 </html>

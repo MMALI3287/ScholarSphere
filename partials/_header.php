@@ -1,10 +1,9 @@
 <nav class="navbar navbar-expand">
     <div class="container-fluid">
-        <div class="d-flex justify-content-center align-items-center ms-2">
-            <a href="index.php">
-                <img src="assets/images/logo.png" alt="Logo" width="100" height="100" class="d-inline-block me-4">
+        <div class="d-flex justify-content-center align-items-center ms-2">            <a href="../index.php">
+                <img src="../assets/images/logo.png" alt="Logo" width="100" height="100" class="d-inline-block me-4">
             </a>
-            <a class="navbar-brand fs-1 align-text-center" href="Welcome.php">
+            <a class="navbar-brand fs-1 align-text-center" href="../pages/Welcome.php">
                 ScholarSphere
             </a>
         </div>
@@ -14,13 +13,12 @@
                     <?php if (session_status() != PHP_SESSION_ACTIVE) {
                         session_start();
                     }
-                    if (isset($_SESSION['username']) && $_SESSION['username'] != '') { ?>
-                        <li class="nav-item">
-                            <a class="nav-link fs-2" href="profile.php">Your Profile</a>
+                    if (isset($_SESSION['username']) && $_SESSION['username'] != '') { ?>                        <li class="nav-item">
+                            <a class="nav-link fs-2" href="../pages/profile.php">Your Profile</a>
                         </li>
                     <?php } else { ?>
                         <li class="nav-item">
-                            <a class="nav-link fs-2" href="signup.php">Get Started</a>
+                            <a class="nav-link fs-2" href="../pages/signup.php">Get Started</a>
                         </li>
                     <?php } ?>
                 </ul>

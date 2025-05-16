@@ -2,7 +2,7 @@
 if (!isset($_SESSION['id'])) {
     session_start();
 }
-require 'connect.php'; // Include your database connection file
+require '../connect.php'; // Include your database connection file
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (mysqli_query($conn, $insertQuery)) {
         // Post added successfully
-        header("Location: forum.php"); // Redirect to the forum page
+        header("Location: ../pages/forum.php"); // Redirect to the forum page
         exit();
     } else {
         // Error inserting post
