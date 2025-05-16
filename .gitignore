@@ -1,6 +1,57 @@
+# Environment files
 .env
+.env.backup
+.env.production
+*.env.local
 
-vendor/
+# Composer dependencies
+/vendor/
+composer.phar
+/composer.lock
 
+# PHP development
+*.log
+.phpunit.result.cache
+.php_cs.cache
+.php-cs-fixer.cache
+*.phar
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Application specific
+/node_modules/
+
+# Project documentation and development notes
 PROJECT_PORTFOLIO.md
 *.prompt.md
+*.todo
+*.notes
+
+# Cache and temporary files
+*.cache
+*.tmp
+/cache/*
+!/cache/.gitkeep
+/temp/*
+!/temp/.gitkeep
+
+# Local configuration files
+config.local.php
+database.local.php
+settings.local.php
