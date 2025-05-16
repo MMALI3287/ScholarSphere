@@ -1,3 +1,6 @@
 .env
 
 vendor/
+
+PROJECT_PORTFOLIO.md
+*.prompt.md
